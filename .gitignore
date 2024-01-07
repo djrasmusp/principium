@@ -106,5 +106,8 @@ Thumbs.db
 # track these mu-plugins, plugins, and themes
 # add your own entries here
 !wp-content/themes/thenight/
+wp-content/themes/thenight/assets/
 !wp-content/themes/daylight/
+wp-content/themes/daylight/assets/
 !wp-content/themes/main/
+wp-content/themes/main/assets/
