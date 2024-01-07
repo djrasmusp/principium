@@ -1,7 +1,9 @@
 const mix = require("laravel-mix");
+const path = require('path')
 mix.setPublicPath("assets");
 
-mix.js(["__dev/js/main.js"], "js")
+mix
+    .js(["__dev/js/main.js"], "js")
     .js(["__dev/js/admin.js"], "js")
 
     .sass("__dev/css/style.scss", "css")
@@ -9,6 +11,13 @@ mix.js(["__dev/js/main.js"], "js")
     .sass("__dev/css/blocks.scss", "css")
     .sass("__dev/css/_editor.scss", "css")
     .sass("__dev/css/login.scss", "css")
+
+    .alias({
+        'blocks' : path.join(__dirname, '__dev/js/blocks'),
+        'components' : path.join(__dirname, '__dev/js/components'),
+        'config' : path.join(__dirname, '__dev/js/config'),
+        'utils': path.join(__dirname, '__dev/js/utils')
+    })
 
     .options({
         processCssUrls: false,
@@ -43,4 +52,5 @@ mix.js(["__dev/js/main.js"], "js")
             "blocks/!**/!*",
             "*.php",
         ],
-    });
+    })
+    .disableSuccessNotifications();
