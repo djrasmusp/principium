@@ -32,3 +32,12 @@ function load_template_part( $template_name, $part_name = null, $args = [] ) {
 	return $content;
 }
 
+function get_post_text($post_content) : string {
+    $blocks = parse_blocks($post_content);
+    foreach ($blocks as $block) {
+        if ($block["blockName"] === "acf/text-content") {
+            return strip_tags($block["attrs"]["data"]['content'], '<br>');
+        }
+    }
+}
+

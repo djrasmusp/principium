@@ -28,6 +28,7 @@ class Blocks {
 	}
 
 	public function error_template() {
+        ray($this->valid_fields());
 		if ( $this->is_preview ) : ?>
             <section class="max-w-3xl mx-auto px-12 py-8 border border-red-300 rounded-sm bg-red-50 text-red-900">
                 <h2 class="font-sans font-medium text-lg"><?= __( 'Fejl' ) ?></h2>

@@ -43,8 +43,7 @@ if (class_exists('TRP_Translate_Press')) :
                             <a href="<?= $lang['current_page_url'] ?>"
                                class="px-4 py-2 flex gap-2 items-center min-w-[124px] group-hover:bg-zinc-300 focus-visible:bg-zinc-200 rounded-none">
                                 <img src="<?= THEME_ICONS ?>/flag-<?= $lang['short_language_name'] ?>.svg" class="h-4" loading="lazy" alt="<?= $lang['language_name'] ?> flag">
-                                <span class="uppercase leading-none tracking-widest font-medium font-header block"
-                                      :class="current ? 'font-bold' : ''"><?= $lang['language_name'] ?></span>
+                                <span class="uppercase leading-none tracking-widest font-medium font-header block"><?= $lang['language_name'] ?></span>
                             </a>
                         </li>
                     <?php endforeach; ?>

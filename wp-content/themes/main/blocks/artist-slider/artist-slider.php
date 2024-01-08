@@ -34,7 +34,7 @@ if (!class_exists('BLOCK_ARTIST_SLIDER')) {
         { ?>
         <section class="<?= $this->get_class_name() ?>  <?= ($this->is_preview) ? 'pointer-events-none' : '' ?>"
              id="<?= $this->get_id() ?>">
-            <?php get_template_part('partials/parts/header', 'artist', array('title' => __('Artist Roster'), 'type' => 'small')) ?>
+            <?php get_template_part('partials/parts/header', 'artist', array('title' => __('Andre artister', 'main-theme'), 'type' => 'small')) ?>
             <div class="splide" aria-label="<?= __('Andre artister', 'main-theme') ?>">
                 <div class="splide__arrows">
                     <button class="sr-only splide__arrow splide__arrow--prev">

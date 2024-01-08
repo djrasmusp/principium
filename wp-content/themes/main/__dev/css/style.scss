@@ -30,7 +30,7 @@
 
 @import "aos/dist/aos.css";
 
-@import "components/buttons";
+@import "components/buttons", "components/splash-page", "components/item-post";
 
 @import "generic/wordpress", "generic/helpers";
 @import "fragments/arrow";
@@ -40,7 +40,7 @@
 
 
 @layer base {
-  *,html {
+  *, html {
     @apply scroll-smooth;
   }
 
@@ -48,5 +48,7 @@
     height: 100dvh;
   }
 
-  [x-cloak] { display: none !important; }
+  [x-cloak] {
+    display: none !important;
+  }
 }

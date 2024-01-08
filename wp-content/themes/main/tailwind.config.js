@@ -54,6 +54,9 @@ module.exports = {
             transitionDuration: {
                 450: "450ms",
             },
+            zIndex: {
+                9999: 9999
+            },
             keyframes: {
                 rasmusp: {
                     "0%, 100%": { color: "#40d4d3" },

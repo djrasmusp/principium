@@ -174,6 +174,16 @@
           "slug": "alerts-error-900",
           "color": "#792723",
           "name": "Error Dark"
+        },
+        {
+          "slug": "splash-page-bg",
+          "color": "#222",
+          "name": "Splash Page - Background"
+        },
+        {
+          "slug": "splash-page-text",
+          "color": "#fafafa",
+          "name": "Splash Page - Text"
         }
       ]
     },
@@ -262,7 +272,6 @@
         }
       }
     },
-    "blocks": {
-    }
+    "blocks": {}
   }
 }

@@ -39,6 +39,7 @@ mix
     .version()
     .browserSync({
         proxy: "http://thenight2023.test",
+        host: "192.168.1.163",
         logLevel: "debug",
         online: true,
         ui: false,
@@ -53,4 +54,3 @@ mix
             "*.php",
         ],
     })
-    .disableSuccessNotifications();

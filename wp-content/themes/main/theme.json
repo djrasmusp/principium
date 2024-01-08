@@ -19,6 +19,16 @@
           "slug" : "spotify",
           "color" : "#1ED760",
           "name" : "Spotify"
+        },
+        {
+          "slug": "splash-page-bg",
+          "color": "#f4f4f5",
+          "name": "Splash Page - Background"
+        },
+        {
+          "slug": "splash-page-text",
+          "color": "#222",
+          "name": "Splash Page - Text"
         }
       ],
         "background": false,

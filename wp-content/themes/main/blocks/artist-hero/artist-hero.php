@@ -66,7 +66,7 @@ if(!class_exists('BLOCK_ARTIST_HERO')) {
                 );
             }
 
-            return get_the_post_thumbnail( $this->post_id, 'full', array( 'class' => 'relative inset-0 object-cover w-full h-full z-0', 'alt' => $this->get_title(), 'itemprop' => 'image' ) );
+            return get_the_post_thumbnail( $this->post_id, 'full', array( 'class' => 'relative inset-0 object-cover w-full h-full z-0', 'alt' => $this->post->post_title, 'itemprop' => 'image' ) );
         }
     }
 }

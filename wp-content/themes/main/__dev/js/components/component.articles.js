@@ -7,8 +7,6 @@ export function componentArticles() {
             formData.append('action', 'load_more_posts');
             formData.append('currentPage', this.currentPage)
 
-            console.log(maxNumPages)
-
             fetch(site_objects.ajax_url, {
                 method: "POST",
                 body: formData

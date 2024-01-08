@@ -40,8 +40,7 @@ export function componentCarousels() {
     for (let i = 0; i < carousels.length; i++) {
         new Splide(carousels[i], {
             i18n: {
-                prev: 'Forrig slide',
-                next: 'Næste slide',
+
             }
         }).mount({ Intersection, AutoScroll });
     }

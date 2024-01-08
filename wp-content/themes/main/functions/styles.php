@@ -61,7 +61,7 @@ add_action(
                 get_template_directory_uri() .
                 "/assets/fonts/" .
                 basename($file) .
-                '" as="font" type="font/' . substr(basename($file), -3) . '" crossorigin />';
+                '" as="font" type="font/' . explode('.', basename($file))[1] . '" crossorigin />';
         }
     },
     1
