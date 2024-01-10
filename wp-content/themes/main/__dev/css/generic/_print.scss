@@ -1,0 +1,65 @@
+@page {
+  margin-top: 1.9cm;
+  margin-bottom: 3.67cm;
+}
+@page :first {
+  margin-top: 2.54cm;
+}
+
+@media print {
+  .accordion-block {
+    .accordion {
+      h2 {
+        & * {
+          @apply text-black;
+        }
+
+        & img {
+          @apply hidden;
+        }
+      }
+
+      div {
+        display: block !important;
+        overflow: visible !important;
+        height: auto !important;
+      }
+    }
+  }
+
+  .content-block {
+    .prose {
+      a {
+        @apply no-underline;
+
+        &:after {
+          content: " ( " attr(href) " ) ";
+          @apply text-sm font-normal;
+        }
+      }
+
+      h1 {
+        page-break-before: always;
+      }
+      
+
+      h2, h3, h4, h5 {
+        page-break-after: avoid;
+      }
+
+      table {
+        page-break-inside: avoid;
+      }
+    }
+  }
+
+  .image-block {
+    & div {
+      @apply text-center;
+      img {
+        margin-left: 20%;
+        @apply max-w-[60%];
+      }
+    }
+  }
+}

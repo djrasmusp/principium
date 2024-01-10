@@ -1,0 +1,26 @@
+{
+    "name": "rasmusp/boilerplate",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "rasmusp\\Boilerplate\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rasmus P",
+            "email": "hello@rasmusp.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+
+        "illuminate/collections": "^9.48",
+        "laravel/helpers": "^1.6",
+        "giggsey/libphonenumber-for-php": "^8.13",
+        "log1x/navi": "^2.0"
+    },
+    "config": {
+        "platform-check": false
+    }
+}

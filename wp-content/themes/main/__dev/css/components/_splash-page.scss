@@ -1,0 +1,11 @@
+.splash-page-language-selector {
+  &:has(button:hover) button:hover,
+  &:has(button:focus-visible) button:focus-visible {
+    @apply opacity-100
+  }
+
+  &:has(button:hover) button:not(:hover),
+  &:has(button:focus-visible) button:not(:focus-visible) {
+    @apply opacity-25
+  }
+}

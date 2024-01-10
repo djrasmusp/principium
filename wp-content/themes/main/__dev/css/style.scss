@@ -1,0 +1,54 @@
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+  $path: "../fonts/";
+  @font-face {
+    font-display: swap;
+    font-family: quote($font-name);
+    font-feature-settings: "lnum";
+    font-style: $style;
+    font-weight: $weight;
+    src: local(""),
+    url($path + $file-name + ".woff2") format('woff2'),
+    url($path + $file-name + ".woff") format('woff');
+  }
+}
+
+@include font-face("Nexa", "Nexa-Black", 900);
+@include font-face("Nexa", "Nexa-Heavy", 800);
+@include font-face("Inter", "Inter-Italic", 400, "italic");
+@include font-face("Inter", "Inter-Regular", 400);
+@include font-face("Inter", "Inter-BoldItalic", 700, "italic");
+@include font-face("Inter", "Inter-Bold", 700);
+
+// BASE
+@tailwind base;
+
+// COMPONENTS
+@tailwind components;
+
+// UTILITIES
+@tailwind utilities;
+
+@import "aos/dist/aos.css";
+
+@import "components/buttons", "components/splash-page", "components/item-post";
+
+@import "generic/wordpress", "generic/helpers";
+@import "fragments/arrow";
+@import "blocks/audio", "blocks/artist-slider";
+
+@import "../../node_modules/@splidejs/splide/dist/css/splide-core.min.css";
+
+
+@layer base {
+  *, html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    height: 100dvh;
+  }
+
+  [x-cloak] {
+    display: none !important;
+  }
+}

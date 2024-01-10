@@ -1,0 +1,35 @@
+
+{
+  "$schema": "https://advancedcustomfields.com/schemas/json/main/block.json",
+  "name" : "article-grid",
+  "title" : "Article Grid",
+  "description" : "",
+  "category" : "mindhelperGL",
+  "version" : "1.0.0",
+  "icon" : "",
+  "apiVersion" : 2,
+  "keywords" : ["content"],
+  "acf" : {
+  	"mode" : "auto",
+    "renderTemplate" : "article-grid.php"
+  },
+  "styles": [
+  ],
+  "supports" : {
+    "align" : false,
+  	"anchor": true,
+  	"color" : {
+  	    "text": false,
+        "background": false
+  	}
+  },
+  "example" : {
+    "attributes" : {
+      "mode" : "edit",
+      "data" : {
+        "preview_image" : true
+      }
+    }
+  }
+}
+  
