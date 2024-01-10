@@ -25,6 +25,10 @@ class ComposerStaticInit645ca020164d5fcdf944342798045ea7
         array (
             'rasmusp\\Boilerplate\\' => 20,
         ),
+        'l' => 
+        array (
+            'libphonenumber\\' => 15,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -47,12 +51,17 @@ class ComposerStaticInit645ca020164d5fcdf944342798045ea7
             'Illuminate\\Support\\' => 19,
             'Illuminate\\Contracts\\' => 21,
         ),
+        'G' => 
+        array (
+            'Giggsey\\Locale\\' => 15,
+        ),
         'D' => 
         array (
             'Doctrine\\Inflector\\' => 19,
         ),
         'C' => 
         array (
+            'Carbon\\Doctrine\\' => 16,
             'Carbon\\' => 7,
         ),
     );
@@ -65,6 +74,10 @@ class ComposerStaticInit645ca020164d5fcdf944342798045ea7
         'rasmusp\\Boilerplate\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'libphonenumber\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src',
         ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
@@ -109,9 +122,17 @@ class ComposerStaticInit645ca020164d5fcdf944342798045ea7
         array (
             0 => __DIR__ . '/..' . '/illuminate/contracts',
         ),
+        'Giggsey\\Locale\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/giggsey/locale/src',
+        ),
         'Doctrine\\Inflector\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector',
+        ),
+        'Carbon\\Doctrine\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine',
         ),
         'Carbon\\' => 
         array (
