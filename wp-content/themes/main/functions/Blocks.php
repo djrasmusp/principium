@@ -67,6 +67,14 @@ class Blocks {
 		return $class_name;
 	}
 
+    protected function get_prose_style() : string {
+        // Put in name of darken styled themes here
+        if(in_array(wp_get_theme()->get('Name'), ['Daylight'])) {
+            return 'prose-invert';
+        }
+        return '';
+    }
+
 	protected function has_errors() {
 		if ( empty( $this->valid_fields() ) ) {
 			return false;

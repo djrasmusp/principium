@@ -34,9 +34,9 @@ if(!class_exists('BLOCK_ARTIST_HERO')) {
             <section class="<?= $this->get_class_name() ?> h-full" id="<?= $this->get_id() ?>">
                 <div class="block relative w-full overflow-hidden <?= ($this->is_preview) ? 'h-full' : 'h-full min-h-screen-ios' ?>">
                     <div class="absolute flex lg:flex-row flex-col-reverse justify-between w-full items-center bottom-0 left-0 z-10">
-                        <header class="min-h-1/6 w-full lg:max-w-fit bg-darkgrey flex items-center" data-aos="slide-right"
+                        <header class="min-h-1/6 w-full lg:max-w-fit bg-header-bg flex items-center" data-aos="slide-right"
                                 data-aos-duration="700" data-aos-once="true" data-aos-easing="ease-in-out-sine">
-                            <h1 class="w-full text-[2rem] lg:text-[4rem] text-center lg:text-left tracking-[0.4rem] lg:px-16 uppercase block text-white font-header"
+                            <h1 class="w-full text-[2rem] lg:text-[4rem] text-center lg:text-left tracking-[0.4rem] lg:px-16 uppercase block text-header-text font-header"
                                 itemprop="name"><?= $this->post->post_title ?></h1>
                         </header>
                         <div class="lg:mr-16 h-24 lg:h-auto">

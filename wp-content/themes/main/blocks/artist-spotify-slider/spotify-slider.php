@@ -47,7 +47,7 @@ if (!class_exists('BLOCK_ARTIST_SLIDER')) {
                                     <li class="splide__slide" itemprop="itemListElement" itemscope
                                         itemtype="https://schema.org/ListItem">
                                         <article itemprop="item" itemscope itemtype="https://schema.org/MusicRecording">
-                                            <div class="relative aspect-square w-full group bg-darkgrey overflow-hidden">
+                                            <div class="relative aspect-square w-full group overflow-hidden">
                                                 <img src="<?= $track->album->images[0]->url ?>"
                                                      class="absolute inset-0 object-cover w-full h-full z-0 transition-all scale-100 duration-450 group-focus-within:brightness-50 <?= ($track->preview_url) ? 'group-hover:scale-110 group-[.pause]:scale-110 group-hover:brightness-50 group-[.pause]:brightness-50' : '' ?>"
                                                      loading="lazy" alt="<?= $track->name ?> Album cover"
@@ -55,23 +55,18 @@ if (!class_exists('BLOCK_ARTIST_SLIDER')) {
                                                 <div class="relative inset-0 flex h-full w-full">
                                                     <?php if ($track->preview_url) : ?>
                                                         <button type="button"
-                                                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block h-16 w-16 transition duration-450 opacity-40 group-hover:opacity-100 group-[.pause]:opacity-100 focus-visible:opacity-100 focus-visible:outline-0 touch-manipulation umami--click--music-<?= sanitize_title($track->name) ?>"
+                                                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block size-16 transition duration-450 opacity-40 group-hover:opacity-100 group-[.pause]:opacity-100 focus-visible:opacity-100 focus-visible:outline-0 touch-manipulation umami--click--music-<?= sanitize_title($track->name) ?>"
                                                                 data-audio="<?= $track->preview_url ?>"
                                                                 title="<?= sprintf(__('Lyt til %s af %s', 'main-theme'), $track->name, implode(', ', array_column($track->artists, 'name'))) ?>"
                                                                 aria-label="Play">
-                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                 viewBox="0 0 512 512"
-                                                                 class="pointer-events-none h-16 w-16 fill-zinc-50 group-[.pause]:hidden">
-                                                                <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                                                                <path d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/>
-                                                            </svg>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="pointer-events-none hidden h-16 w-16 fill-zinc-50 group-[.pause]:block" viewBox="0 0 320 512"><path d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z"/></svg>
+                                                            <img src="<?= THEME_ICONS ?>/play.svg" class="injectable pointer-events-none size-16 fill-zinc-50 group-[.pause]:hidden">
+                                                            <img src="<?= THEME_ICONS ?>/pause.svg" class="injectable pointer-events-none hidden h-16 w-16 fill-zinc-50 group-[.pause]:block">
                                                         </button>
                                                     <?php endif; ?>
-                                                    <a class="absolute bottom-4 right-4 drop-shadow-md rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" title="<?= sprintf(__('Lyt til %s af %s', 'main-theme'), $track->name, implode(', ', array_column($track->artists, 'name'))) ?>" href="<?= $track->external_urls->spotify ?>" target="_blank"><img src="<?= THEME_ICONS ?>/spotify.svg" class="injectable h-4 w-4 fill-spotify"></a>
+                                                    <a class="absolute bottom-4 right-4 drop-shadow-md rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" title="<?= sprintf(__('Lyt til %s af %s', 'main-theme'), $track->name, implode(', ', array_column($track->artists, 'name'))) ?>" href="<?= $track->external_urls->spotify ?>" target="_blank"><img src="<?= THEME_ICONS ?>/spotify.svg" class="injectable size-4 fill-spotify"></a>
                                                 </div>
                                             </div>
-                                            <h3 class="relative my-4 text-center text-xs md:text-sm uppercase font-header line-clamp-2"
+                                            <h3 class="relative my-4 text-center text-xs md:text-sm uppercase font-header line-clamp-2 text-page-text"
                                                 itemprop="name"><?= $track->name ?></h3>
                                             <span itemprop="byArtist" itemscope itemtype="https://schema.org/MusicGroup"
                                                   class="sr-only">

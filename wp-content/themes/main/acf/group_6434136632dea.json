@@ -404,10 +404,10 @@
                 },
                 {
                     "key": "field_659ecf6961ce8",
-                    "label": "Whatsapp",
-                    "name": "whatsapp",
+                    "label": "weChat",
+                    "name": "weChat",
                     "aria-label": "",
-                    "type": "number",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -417,10 +417,8 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "min": "",
-                    "max": "",
+                    "maxlength": "",
                     "placeholder": "",
-                    "step": "",
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_64341366ed92a"
@@ -495,6 +493,7 @@
                                 "tiktok": "Tiktok",
                                 "twitter": "Twitter",
                                 "youtube": "Youtube",
+                                "wechat": "weChat",
                                 "whatsapp": "Whatsapp"
                             },
                             "default_value": false,
@@ -548,5 +547,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1704909226
+    "modified": 1704913137
 }

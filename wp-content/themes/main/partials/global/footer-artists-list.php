@@ -32,7 +32,7 @@ $artists = get_posts(array(
                             href="<?= get_permalink($artist) ?>"
                             title="<?= sprintf(__('Booking af %s', 'main-theme'), $artist->post_title) ?>"
                             itemprop="url"
-                            class="text-zinc-400 transition-all hover:bg-zinc-50 hover:text-darkgrey ring-4 ring-transparent hover:ring-zinc-50 focus-visible:bg-zinc-50 focus-visible:text-darkgrey focus-visible:outline-0 focus-visible:ring-zinc-50">
+                            class="text-zinc-400 transition-all hocus:bg-zinc-50 hocus:text-darkgrey ring-4 ring-transparent hocus:ring-zinc-50 focus-visible:outline-0">
                         <span itemprop="name"><?= sprintf(__('Booking af %s', 'main-theme'), $artist->post_title) ?></span>
                     </a>
                 </li>

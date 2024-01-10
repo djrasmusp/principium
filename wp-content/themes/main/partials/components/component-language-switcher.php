@@ -11,24 +11,22 @@ if (class_exists('TRP_Translate_Press')) :
 
     ?>
     <div class="mt-8" x-data="{menuToggle: false}">
-        <div class="relative" x-trap.noscroll="menuToggle" @keydown.down="$focus.wrap().next()"
+        <div class="relative" x-trap.noscroll="menuToggle" @keydown.down="$focus.wrap().next()" @keydown.escape	="menuToggle = false"
              @keydown.up="$focus.wrap().previous()">
             <button type="button"
-                    class="px-4 w-48 h-12 py-2 border-2 border-zinc-300 hover:border-zinc-400 flex gap-2 items-center justify-between text-darkgrey"
-                    :class="menuToggle ? '!border-darkgrey' : 'outline outline-2 outline-transparent outline-offset-4 focus-visible:outline-darkgrey focus-visible:border-zinc-400'"
+                    class="px-4 w-48 h-12 py-2 border-2 border-page-border hover:border-page-border-highlight flex gap-2 items-center justify-between text-page-text"
+                    :class="menuToggle ? '!border-language-switcher-border' : 'outline outline-2 outline-transparent outline-offset-4 focus-visible:outline-darkgrey focus-visible:border-border-page-border-highlight'"
                     @click="menuToggle = !menuToggle">
                 <span class="flex gap-2 items-center">
-                <img src="<?= THEME_ICONS ?>/flag-<?= $current_language['short_language_name'] ?>.svg" class="h-4" loading="lazy" alt="<?= $current_language['language_name'] ?> flag">
+                <img src="<?= THEME_ICONS ?>/flag-<?= $current_language['short_language_name'] ?>.svg" class="h-4"
+                     loading="lazy" alt="<?= $current_language['language_name'] ?> flag">
                 <span class="uppercase tracking-widest font-medium font-header"><?= $current_language['language_name'] ?></span>
                     </span>
-                <svg width="8" height="5" viewBox="0 0 8 5" fill="none" stroke="currentColor" class="ml-4"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <line x1="3.64645" y1="4.64645" x2="7.64645" y2="0.646447"/>
-                    <line x1="0.353553" y1="0.646447" x2="4.35355" y2="4.64645"/>
-                </svg>
+                <img src="<?= THEME_ICONS ?>/chevron-up.svg" class="injectable size-4 transition duration-100 ease-out fill-page-text" :class="{ 'rotate-180' : !menuToggle }">
             </button>
-            <div class="absolute w-48 top-4 border-2 border-t-0 rounded-b border-darkgrey mt-8 bg-zinc-100"
+            <div class="absolute w-48 top-4 border-2 border-t-0 rounded-b border-language-switcher-border mt-8 bg-language-switcher-bg"
                  x-show="menuToggle"
+                 x-cloak
                  @click.outside="menuToggle = false"
                  x-transition:enter="transition ease-out duration-200 origin-top"
                  x-transition:enter-start="scale-y-0"
@@ -41,9 +39,10 @@ if (class_exists('TRP_Translate_Press')) :
                         <li class="first:rounded-tr last:rounded-b w-full group"
                             data-no-translation x-data="{current: <?= var_export(($key == $current_lang_key)) ?>}">
                             <a href="<?= $lang['current_page_url'] ?>"
-                               class="px-4 py-2 flex gap-2 items-center min-w-[124px] group-hover:bg-zinc-300 focus-visible:bg-zinc-200 rounded-none">
-                                <img src="<?= THEME_ICONS ?>/flag-<?= $lang['short_language_name'] ?>.svg" class="h-4" loading="lazy" alt="<?= $lang['language_name'] ?> flag">
-                                <span class="uppercase leading-none tracking-widest font-medium font-header block"><?= $lang['language_name'] ?></span>
+                               class="px-4 py-2 flex gap-2 items-center min-w-[124px] hocus:bg-language-switcher-bg-highlight rounded-none">
+                                <img src="<?= THEME_ICONS ?>/flag-<?= $lang['short_language_name'] ?>.svg" class="h-4"
+                                     loading="lazy" alt="<?= $lang['language_name'] ?> flag">
+                                <span class="text-page-text uppercase leading-none tracking-widest font-medium font-header block"><?= $lang['language_name'] ?></span>
                             </a>
                         </li>
                     <?php endforeach; ?>

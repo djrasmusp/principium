@@ -34,7 +34,7 @@ if (!class_exists('BLOCK_PERSONAL')) {
             <section class="<?= $this->get_class_name() ?> my-16" id="<?= $this->get_id() ?>">
                 <header class="relative h-full overflow-hidden inline-flex items-center">
                     <div class="relative flex items-center h-full">
-                        <h3 class="text-xl px-6 lg:text-[2rem] lg:px-0 tracking-wider text-darkgrey lg:ml-16 lg:mr-32 uppercase block font-header"><?= $this->get_title() ?></h3>
+                        <h3 class="text-xl px-6 lg:text-[2rem] lg:px-0 tracking-wider text-page-text lg:ml-16 lg:mr-32 uppercase block font-header"><?= $this->get_title() ?></h3>
                     </div>
                 </header>
                 <div class="grid gap-8 grid-cols-1 lg:grid-cols-3 mt-8">
@@ -49,32 +49,32 @@ if (!class_exists('BLOCK_PERSONAL')) {
                             )) ?>
                             <div class="relative px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-start gap-x-4">
                                 <div>
-                                    <h4 class="text-xl font-header uppercase mt-2"><?= $person['name'] ?></h4>
-                                    <span class="text-sm text-darkgrey/80"><?= $person['position'] ?></span>
+                                    <h4 class="text-xl text-page-text font-header uppercase mt-2"><?= $person['name'] ?></h4>
+                                    <span class="text-sm text-page-text-downplayed"><?= $person['position'] ?></span>
                                     <ul class="flex flex-col  mt-2">
                                         <?php if ($person['phone']) : ?>
                                             <li class="flex gap-1 items-center">
-                                                <img src="<?= THEME_ICONS ?>/phone.svg" class="injectable w-3 h-3 fill-zinc-400"/>
-                                                <a class="inline-flex gap-x-2 items-center px-2 hover:bg-darkgrey group"
+                                                <img src="<?= THEME_ICONS ?>/phone.svg" class="injectable size-3 fill-page-border-highlight"/>
+                                                <a class="inline-flex gap-x-2 items-center px-2 text-page-text hocus:bg-header-bg group"
                                                    href="<?= $phoneUtil->format($phone, \libphonenumber\PhoneNumberFormat::RFC3966) ?>"
                                                    data-no-translation-href>
-                                                    <span class="uppercase leading-relaxed font-header tracking-wider group-hover:text-zinc-50"><?= $phoneUtil->format($phone, \libphonenumber\PhoneNumberFormat::INTERNATIONAL) ?></span></a>
+                                                    <span class="uppercase leading-relaxed font-header tracking-wider group-hover:text-header-text group-focus-visible:text-header-text"><?= $phoneUtil->format($phone, \libphonenumber\PhoneNumberFormat::INTERNATIONAL) ?></span></a>
                                             </li>
                                         <?php endif; ?>
-                                        <?php if($person['whatsapp']) : ?>
+                                        <?php if($person['wechat']) : ?>
                                             <li class="flex gap-1 items-center">
-                                                <img src="<?= THEME_ICONS ?>/whatsapp.svg" class="injectable w-4 h-4 fill-zinc-400"/>
-                                                <a class="inline-flex gap-x-2 items-center px-2 hover:bg-darkgrey group"
-                                                   href="https://wa.me/<?= $person['whatsapp'] ?>" target="_blank" data-no-translation-href>
-                                                    <span class="uppercase leading-relaxed font-header tracking-wider group-hover:text-zinc-50"><?= $person['whatsapp'] ?></span></a>
+                                                <img src="<?= THEME_ICONS ?>/wechat.svg" class="injectable w-4 h-4 fill-page-border-highlight"/>
+                                                <a class="inline-flex gap-x-2 items-center text-page-text px-2 hocus:bg-header-bg group"
+                                                   href="weixin://dl/chat?<?= $person['wechat'] ?>" target="_blank" data-no-translation-href>
+                                                    <span class="uppercase leading-relaxed font-header tracking-wider group-hover:text-header-text group-focus-visible:text-header-text"><?= $person['whatsapp'] ?></span></a>
                                             </li>
                                         <?php endif; ?>
                                         <?php if ($person['email']) : ?>
                                             <li class="flex gap-1 items-center">
                                                 <img src="<?= THEME_ICONS ?>/e-mail.svg" class="injectable w-3 h-3 fill-zinc-400"/>
-                                                <a class="inline-flex gap-x-2 items-center px-2 hover:bg-darkgrey group"
+                                                <a class="inline-flex gap-x-2 items-center text-page-text px-2 hocus:bg-header-bg group"
                                                    href="mailto:<?= $person['email'] ?>" data-no-translation-href>
-                                                    <span class="uppercase leading-relaxed font-header tracking-wider group-hover:text-zinc-50"><?= $person['email'] ?></span></a>
+                                                    <span class="uppercase leading-relaxed font-header tracking-wider group-hover:text-header-text group-focus-visible:text-header-text"><?= $person['email'] ?></span></a>
                                             </li>
                                         <?php endif; ?>
                                     </ul>
@@ -90,7 +90,7 @@ if (!class_exists('BLOCK_PERSONAL')) {
                                                        data-no-translation-href>
                                                         <img
                                                                 src="<?= THEME_ICONS ?>/<?= $social['media'] ?>.svg"
-                                                                class="w-5 h-5 transition-all duration-450 injectable fill-darkgrey">
+                                                                class="w-5 h-5 transition-all duration-450 injectable fill-page-text">
                                                     </a>
                                                 </li>
                                             <?php endforeach; ?>

@@ -12,18 +12,19 @@
   }
 }
 
-@include font-face("Raleway", "Raleway-Italic", 400, "italic");
-@include font-face("Raleway", "Raleway-Regular", 400);
-@include font-face("Raleway", "Raleway-BoldItalic", 700, "italic");
-@include font-face("Raleway", "Raleway-Bold", 700);
-@include font-face("Raleway", "Raleway-BlackItalic", 900, "italic");
-@include font-face("Raleway", "Raleway-Black", 900);
+@include font-face("Nexa", "Nexa-Black", 900);
+@include font-face("Nexa", "Nexa-Heavy", 800);
+@include font-face("Inter", "Inter-Italic", 400, "italic");
+@include font-face("Inter", "Inter-Regular", 400);
+@include font-face("Inter", "Inter-BoldItalic", 700, "italic");
+@include font-face("Inter", "Inter-Bold", 700);
 
 body {
+  background: #222;
 }
 
 #login {
-  @apply max-w-md w-full;
+  @apply max-w-sm w-full;
 
   h1 {
     a {
@@ -36,7 +37,7 @@ body {
   }
 
   form {
-    @apply border-none rounded-xl;
+    @apply border-none rounded-xl bg-zinc-100;
     box-shadow: none;
 
     input[type="text"]{
@@ -48,7 +49,7 @@ body {
     }
 
     input[type="submit"] {
-      @apply font-sans;
+      @apply font-sans bg-[#222] border-[#222] font-medium font-sans;
 
       &:hover {
         color: white !important;
@@ -107,7 +108,7 @@ body {
 .language-switcher {
 
   span {
-    @apply text-primary-50
+    @apply text-red-600;
   }
 
   select {

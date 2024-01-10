@@ -15,6 +15,6 @@ $count = $args['count'];
         <?= $item->post_title ?>
     </h2>
     <div class="h-full group-focus-visible:brightness-75 brightness-100 transition duration-300 ease-in-out group-hover:brightness-75">
-        <?= get_the_post_thumbnail($item->ID, 'full', array('class' => 'overflow-hidden absolute inset-0 object-cover w-full h-full scale-100 transition-transform duration-300 group-hover:scale-110 group-focus-visible:scale-110')) ?>
+        <?= get_the_post_thumbnail($item->ID, 'large', array('class' => 'overflow-hidden absolute inset-0 object-cover w-full h-full scale-100 transition-transform duration-300 group-hover:scale-110 group-focus-visible:scale-110')) ?>
     </div>
 </a>

@@ -12,7 +12,7 @@ $family_navigation = (new Navi())->build('family');
                         <?php foreach ($family_navigation->toArray() as $item) : ?>
                             <li class="text-xs font-header uppercase tracking-widest">
                                 <a href="<?= $item->url ?>" target="_blank"
-                                   class="text-zinc-300 transition-all hover:bg-zinc-50 hover:text-darkgrey ring-2 ring-transparent hover:ring-zinc-50 focus-visible:bg-zinc-50 focus-visible:text-darkgrey focus-visible:outline-0 focus-visible:ring-zinc-50">
+                                   class="text-zinc-300 transition-all hocus:bg-zinc-50 hocus:text-darkgrey ring-2 ring-transparent hocus:ring-zinc-50 focus-visible:outline-0">
                                 <?= $item->label ?>
                                 </a>
                             </li>
@@ -23,7 +23,7 @@ $family_navigation = (new Navi())->build('family');
         <?php endif; ?>
         <div class="flex flex-col items-center lg:items-end gap-2">
             <a href="https://rasmusp.com"
-               class="group text-xs text-zinc-700 hover:text-zinc-400 focus-visible:text-zinc-400 focus-visible:outline-0 group transition-all duration-0">created
+               class="group text-xs text-zinc-700 hocus:text-zinc-400 focus-visible:outline-0 group transition-all duration-0">created
                 by: <span
                         class="font-bold uppercase group-hover:animate-rasmusp group-focus-visible:animate-rasmusp">Rasmus P</span>.</a>
             <span class="text-zinc-500 text-xs">&copy; <?= date( 'Y' ) ?> <span class="text-zinc-400 font-bold"><?= get_bloginfo('name') ?></span>. <?= __('Alle rettigheder forbeholdes', 'main-theme') ?></span>

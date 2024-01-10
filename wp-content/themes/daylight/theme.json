@@ -6,186 +6,114 @@
       "defaultPalette": false,
       "palette": [
         {
-          "slug": "primary-50",
-          "color": "#F7F9FF",
-          "name": "Primary 50"
-        },
-        {
-          "slug": "primary-100",
-          "color": "#DFE7FC",
-          "name": "Primary 100"
-        },
-        {
-          "slug": "primary-200",
-          "color": "#D6E2FF",
-          "name": "Primary 200"
-        },
-        {
-          "slug": "primary-300",
-          "color": "#C9D3FF",
-          "name": "Primary 300"
-        },
-        {
-          "slug": "primary-400",
-          "color": "#B9C6FF",
-          "name": "Primary 400"
-        },
-        {
-          "slug": "primary-500",
-          "color": "#900900",
-          "name": "Primary 500"
-        },
-        {
-          "slug": "primary-600",
-          "color": "#8291D7",
-          "name": "Primary 600"
-        },
-        {
-          "slug": "primary-700",
-          "color": "#6777BB",
-          "name": "Primary 700"
-        },
-        {
-          "slug": "primary-800",
-          "color": "#4C5E9F",
-          "name": "Primary 800"
-        },
-        {
-          "slug": "primary-900",
-          "color": "#304785",
-          "name": "Primary 900"
-        },
-        {
-          "slug": "gray-50",
-          "color": "#FAFAFA",
-          "name": "Gray 50"
-        },
-        {
-          "slug": "gray-100",
-          "color": "#F5F5F5",
-          "name": "Gray 100"
-        },
-        {
-          "slug": "gray-200",
-          "color": "#E0E0E0",
-          "name": "Gray 200"
-        },
-        {
-          "slug": "gray-300",
-          "color": "#D1D1D1",
-          "name": "Gray 300"
-        },
-        {
-          "slug": "gray-400",
-          "color": "#BDBDBD",
-          "name": "Gray 400"
-        },
-        {
-          "slug": "gray-500",
-          "color": "#9E9E9E",
-          "name": "Gray 500"
-        },
-        {
-          "slug": "gray-600",
-          "color": "#757575",
-          "name": "Gray 600"
-        },
-        {
-          "slug": "gray-700",
-          "color": "#616161",
-          "name": "Gray 700"
-        },
-        {
-          "slug": "gray-800",
-          "color": "#424242",
-          "name": "Gray 800"
-        },
-        {
-          "slug": "gray-900",
-          "color": "#212121",
-          "name": "Gray 900"
-        },
-        {
-          "slug": "contrast-blue",
-          "color": "#5490CA",
-          "name": "Blue"
-        },
-        {
-          "slug": "contrast-yellow",
-          "color": "#E9D399",
-          "name": "Yellow"
-        },
-        {
-          "slug": "contrast-orange",
-          "color": "#F69265",
-          "name": "Orange"
-        },
-        {
-          "slug": "contrast-purple",
-          "color": "#5361AC",
-          "name": "Purple"
-        },
-        {
-          "slug": "contrast-rose",
-          "color": "#EFB9B9",
-          "name": "Rose"
-        },
-        {
-          "slug": "contrast-green",
-          "color": "#65C6B9",
-          "name": "Green"
-        },
-        {
-          "slug": "alerts-success-100",
-          "color": "#E5F8E9",
-          "name": "Success Light"
-        },
-        {
-          "slug": "alerts-success-900",
-          "color": "#1C5037",
-          "name": "Success Dark"
-        },
-        {
-          "slug": "alerts-information-100",
-          "color": "#BBC1F4",
-          "name": "Information Light"
-        },
-        {
-          "slug": "alerts-information-900",
-          "color": "#111B69",
-          "name": "Information Dark"
-        },
-        {
-          "slug": "alerts-warning-100",
-          "color": "#FFFCB5",
-          "name": "Warning Light"
-        },
-        {
-          "slug": "alerts-warning-900",
-          "color": "#653402",
-          "name": "Warning Dark"
-        },
-        {
-          "slug": "alerts-error-100",
-          "color": "#FFDDDD",
-          "name": "Error Light"
-        },
-        {
-          "slug": "alerts-error-900",
-          "color": "#792723",
-          "name": "Error Dark"
-        },
-        {
-          "slug": "splash-page-bg",
+          "name": "Page - Background",
           "color": "#222",
-          "name": "Splash Page - Background"
+          "slug": "page-bg"
         },
         {
-          "slug": "splash-page-text",
+          "name": "Page - Text",
           "color": "#fafafa",
-          "name": "Splash Page - Text"
+          "slug": "page-text"
+        },
+        {
+          "name": "Page - Text - Downplayed",
+          "color": "#52525b",
+          "slug": "page-text-downplayed"
+        },
+        {
+          "name": "Page - Border",
+          "color": "#d4d4d8",
+          "slug": "page-border"
+        },
+        {
+          "name": "Page - Border - Highlight",
+          "color": "#a1a1aa",
+          "slug": "page-border-highlight"
+        },
+        {
+          "name": "Splash Page - Background",
+          "color": "#222",
+          "slug": "splash-page-bg"
+        },
+        {
+          "name": "Splash Page - Text",
+          "color": "#f4f4f5",
+          "slug": "splash-page-text"
+        },
+        {
+          "name": "Header - Background",
+          "color": "#fafafa",
+          "slug": "header-bg"
+        },
+        {
+          "name": "Header - Text",
+          "color": "#222",
+          "slug": "header-text"
+        },
+        {
+          "name": "Menu - Background",
+          "color": "#222",
+          "slug": "menu-bg"
+        },
+        {
+          "name": "Menu - Background - Mobile",
+          "color": "#222",
+          "slug": "menu-bg-mobile"
+        },
+        {
+          "name": "Menu Text",
+          "color": "#fafafa",
+          "slug": "menu-text"
+        },
+        {
+          "name": "Language Switcher - Background",
+          "color": "#000",
+          "slug": "language-switcher-bg"
+        },
+        {
+          "name": "Language Switcher - Border",
+          "color": "#fafafa",
+          "slug": "language-switcher-border"
+        },
+        {
+          "name": "Language Switcher - Background - Highlight",
+          "color": "#333",
+          "slug": "language-switcher-bg-highlight"
+        },
+        {
+          "name": "Button - Background ",
+          "color": "#222",
+          "slug": "button-bg"
+        },
+        {
+          "name": "Button - Text",
+          "color": "#fafafa",
+          "slug": "button-text"
+        },
+        {
+          "name": "Button - Background - Highlight",
+          "color": "#000",
+          "slug": "button-bg-highlight"
+        },
+        {
+          "name": "Footer - Background",
+          "color": "#000",
+          "slug": "footer-bg"
+        },
+        {
+          "name": "Spotify",
+          "color": "#1ED760",
+          "slug": "spotify"
+        },
+        {
+          "name": "Dark Grey",
+          "color": "#222",
+          "slug": "darkgrey"
         }
-      ]
+      ],
+      "background": false,
+      "link": false,
+      "text": false
     },
     "typography": {
       "fontFamilies": [

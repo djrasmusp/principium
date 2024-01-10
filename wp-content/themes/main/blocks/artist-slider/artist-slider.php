@@ -38,7 +38,7 @@ if (!class_exists('BLOCK_ARTIST_SLIDER')) {
             <div class="splide" aria-label="<?= __('Andre artister', 'main-theme') ?>">
                 <div class="splide__arrows">
                     <button class="sr-only splide__arrow splide__arrow--prev">
-                        Prev
+                        <span class="sr-only"><?= __('Forrige', 'main-theme') ?></span>
                     </button>
                 </div>
                 <div class="splide__track">
@@ -47,10 +47,10 @@ if (!class_exists('BLOCK_ARTIST_SLIDER')) {
                             <li class="relative overflow-hidden splide__slide" itemscope
                                 itemtype="https://schema.org/MusicGroup">
                                 <a href="<?= get_permalink($artist->ID) ?>"
-                                   class="group focus-visible:bg-green-200" itemprop="url">
-                                    <h2 class="absolute bottom-2 left-2 right-2 z-10 uppercase text-zinc-50 font-header transition-all tracking-widest duration-300 lg:text-3xl drop-shadow-md"
+                                   class="group" itemprop="url">
+                                    <h2 class="absolute bottom-2 left-2 right-2 z-10 uppercase text-white font-header transition-all tracking-widest duration-300 lg:text-3xl drop-shadow-md"
                                         itemprop="name"><?= $artist->post_title ?></h2>
-                                    <div class="relative aspect-square w-full overflow-hidden bg-darkgrey">
+                                    <div class="relative aspect-square w-full overflow-hidden">
                                         <?= get_the_post_thumbnail(
                                             $artist->ID,
                                             'full',
@@ -69,7 +69,7 @@ if (!class_exists('BLOCK_ARTIST_SLIDER')) {
                 </div>
                 <div class="splide__arrows">
                     <button class="sr-only splide__arrow splide__arrow--next">
-                        Next
+                        <span class="sr-only"><?= __('Næste', 'main-theme') ?></span>
                     </button>
                 </div>
             </div>

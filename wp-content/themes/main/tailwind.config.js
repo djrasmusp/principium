@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
+const plugin = require('tailwindcss/plugin');
 
 const theme = require('./theme.json');
 const tailpress = require("@jeffreyvr/tailwindcss-tailpress");
@@ -182,7 +183,10 @@ module.exports = {
         require("@tailwindcss/typography"),
         require("@tailwindcss/forms"),
         require("tailwindcss-text-fill-stroke")(),
-        tailpress.tailwind
+        tailpress.tailwind,
+        plugin(function({ addVariant }) {
+            addVariant('hocus', ['&:hover', '&:focus-visible'])
+        })
     ],
 };
 

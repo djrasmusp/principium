@@ -6,29 +6,109 @@
       "defaultPalette": false,
       "palette": [
         {
-          "slug": "primary-50",
-          "color": "#F7F9FF",
-          "name": "Primary 50"
+          "name": "Page - Background",
+          "color": "#fafafa",
+          "slug": "page-bg"
         },
         {
-          "slug" : "darkgrey",
-          "color" : "#222",
-          "name": "Dark Grey"
-        },
-        {
-          "slug" : "spotify",
-          "color" : "#1ED760",
-          "name" : "Spotify"
-        },
-        {
-          "slug": "splash-page-bg",
-          "color": "#f4f4f5",
-          "name": "Splash Page - Background"
-        },
-        {
-          "slug": "splash-page-text",
+          "name": "Page - Text",
           "color": "#222",
-          "name": "Splash Page - Text"
+          "slug": "page-text"
+        },
+        {
+          "name": "Page - Text - Downplayed",
+          "color": "#52525b",
+          "slug": "page-text-downplayed"
+        },
+        {
+          "name": "Page - Border",
+          "color": "#d4d4d8",
+          "slug": "page-border"
+        },
+        {
+          "name": "Page - Border - Highlight",
+          "color": "#a1a1aa",
+          "slug": "page-border-highlight"
+        },
+        {
+          "name": "Splash Page - Background",
+          "color": "#f4f4f5",
+          "slug": "splash-page-bg"
+        },
+        {
+          "name": "Splash Page - Text",
+          "color": "#222",
+          "slug": "splash-page-text"
+        },
+        {
+          "name": "Header - Background",
+          "color": "#222",
+          "slug": "header-bg"
+        },
+        {
+          "name": "Header - Text",
+          "color": "#fafafa",
+          "slug": "header-text"
+        },
+        {
+          "name": "Menu - Background",
+          "color": "#fafafa",
+          "slug": "menu-bg"
+        },
+        {
+          "name": "Menu - Background - Mobile",
+          "color": "#222",
+          "slug": "menu-bg-mobile"
+        },
+        {
+          "name": "Menu Text",
+          "color": "#222",
+          "slug": "menu-text"
+        },
+        {
+          "name": "Language Switcher - Background",
+          "color": "#f4f4f5",
+          "slug": "language-switcher-bg"
+        },
+        {
+          "name": "Language Switcher - Border",
+          "color": "#222",
+          "slug": "language-switcher-border"
+        },
+        {
+          "name": "Language Switcher - Background - Highlight",
+          "color": "#d4d4d8",
+          "slug": "language-switcher-bg-highlight"
+        },
+        {
+          "name": "Button - Background ",
+          "color": "#222",
+          "slug": "button-bg"
+        },
+        {
+          "name": "Button - Text",
+          "color": "#fafafa",
+          "slug": "button-text"
+        },
+        {
+          "name": "Button - Background - Highlight",
+          "color": "#000",
+          "slug": "button-bg-highlight"
+        },
+        {
+          "name": "Footer - Background",
+          "color": "#09090b",
+          "slug": "footer-bg"
+        },
+        {
+          "name": "Spotify",
+          "color": "#1ED760",
+          "slug": "spotify"
+        },
+        {
+          "name": "Dark Grey",
+          "color": "#222",
+          "slug": "darkgrey"
         }
       ],
         "background": false,

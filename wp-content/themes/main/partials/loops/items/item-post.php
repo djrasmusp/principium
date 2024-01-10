@@ -7,7 +7,7 @@
     <div class="h-full">
         <div class="absolute inset-0 z-10 bg-gradient-to-t to-transparent from-zinc-950/70 from-10% to-50%"></div>
         <?php if (has_post_thumbnail($post->ID)) : ?>
-            <?= get_the_post_thumbnail($post->ID, 'medium', array('class' => 'overflow-hidden absolute inset-0 object-cover w-full h-full scale-105 transition brigtness-100 duration-300 ease-in group-hover:brightness-90 group-hover:scale-110 group-focus-visible:brightness-90 group-focus-visible:scale-110')) ?>
+            <?= get_the_post_thumbnail($post->ID, 'large', array('class' => 'overflow-hidden absolute inset-0 object-cover w-full h-full scale-105 transition brightness-100 duration-300 ease-in group-hover:brightness-90 group-hover:scale-110 group-focus-visible:brightness-90 group-focus-visible:scale-110')) ?>
         <?php else: ?>
             <div class="block h-full w-full"></div>
         <?php endif; ?>
