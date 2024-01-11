@@ -67,7 +67,6 @@ add_filter("wpseo_metadesc", function ($meta, $presentation) {
 
     if ($presentation->model->object_sub_type != "artist") {
         foreach ($blocks as $block) {
-            ray($blocks);
             if ($block["blockName"] === "acf/text-content") {
                 if(class_exists('TRP_Translate_Press')){
                     $string = apply_filters('the_content', $block["attrs"]["data"]['content']);

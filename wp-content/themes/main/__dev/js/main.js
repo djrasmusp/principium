@@ -14,6 +14,7 @@ import {componentLottie} from "components/component.lottie";
 
 import {blockVideo} from "blocks/block.video";
 import {componentSplashPage} from "./components/component.splash-page";
+import {componentMenus} from "./components/component.menus";
 
 document.addEventListener("DOMContentLoaded", function () {
     AOS.init();
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     Alpine.plugin(focus);
     Alpine.plugin(collapse);
 
+    componentMenus()
     componentSplashPage();
     componentLottie();
     componentCarousels()

@@ -57,8 +57,13 @@
         },
         {
           "name": "Menu - Background - Mobile",
-          "color": "#000",
+          "color": "#090909",
           "slug": "menu-bg-mobile"
+        },
+        {
+          "name": "Menu - Background - Artist",
+          "color": "#1d1d1d",
+          "slug": "menu-bg-artist"
         },
         {
           "name": "Menu Text",
@@ -97,7 +102,7 @@
         },
         {
           "name": "Footer - Background",
-          "color": "#000",
+          "color": "#090909",
           "slug": "footer-bg"
         },
         {

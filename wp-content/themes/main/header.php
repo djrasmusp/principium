@@ -21,6 +21,6 @@
     <?php endif; ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?>  x-data="menusState">
 <?php get_template_part('partials/global/google/google', 'pixel'); ?>
 <?php get_template_part('partials/global/site', 'header') ?>
