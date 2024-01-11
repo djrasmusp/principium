@@ -38,7 +38,7 @@ export function  componentMenus() {
             ["x-show"]() {
                 return this.show_mobile_menu;
             },
-            ["x-trap.noreturn"]() {
+            ["x-trap.noscroll"]() {
                 return this.show_mobile_menu;
             },
             ["@keydown.escape"]() {

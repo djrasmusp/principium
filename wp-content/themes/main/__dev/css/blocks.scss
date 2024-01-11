@@ -19,6 +19,14 @@ html :where(.wp-block) {
     max-width: 100%;
 }
 
+.editor-styles-wrapper {
+    @apply bg-page-bg;
+}
+
+.edit-post-visual-editor__post-title-wrapper .editor-post-title {
+    @apply text-page-text px-16 text-[3rem] uppercase tracking-wider text-page-text font-header;
+}
+
 .acf-block-body:not(.is-selected) {
     margin-top: 48px;
     margin-bottom: 48px;
