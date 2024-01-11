@@ -61,6 +61,11 @@
           "slug": "menu-bg-mobile"
         },
         {
+          "name": "Menu - Background - Artist",
+          "color": "#222",
+          "slug": "menu-bg-artist"
+        },
+        {
           "name": "Menu Text",
           "color": "#222",
           "slug": "menu-text"

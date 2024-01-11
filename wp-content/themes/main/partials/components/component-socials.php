@@ -1,4 +1,4 @@
-<footer class="hidden lg:block fixed bottom-0 lg:h-1/6 bg-footer-bg w-1/5 z-20">
+<footer class="hidden lg:block fixed bottom-0 lg:h-1/6 bg-footer-bg w-1/5 z-50">
     <?php if($socials = get_field( 'social_media', 'option' )) : ?>
         <ul class="flex w-full justify-center gap-8 socials absolute bottom-4">
             <?php foreach ( $socials as $social ) : ?>
