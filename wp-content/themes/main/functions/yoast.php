@@ -2,7 +2,7 @@
 
 add_filter("wpseo_metadesc", function ($meta, $presentation) {
 
-    if(class_exists('TRP_Translate_Press')) {
+    if (class_exists('TRP_Translate_Press')) {
         $trp = TRP_Translate_Press::get_trp_instance();
         $translate = $trp->get_component('translation_render');
     }
@@ -22,7 +22,7 @@ add_filter("wpseo_metadesc", function ($meta, $presentation) {
 
     foreach ($blocks as $block) {
         if ($block["blockName"] === "acf/artist-content") {
-            if(class_exists('TRP_Translate_Press')){
+            if (class_exists('TRP_Translate_Press')) {
                 $string = apply_filters('the_content', $block["attrs"]["data"]['content']);
                 $translation = $translate->translate_page($string);
                 return $translation;
@@ -38,7 +38,7 @@ add_filter("wpseo_metadesc", function ($meta, $presentation) {
 
 add_filter("wpseo_metadesc", function ($meta, $presentation) {
 
-    if(class_exists('TRP_Translate_Press')) {
+    if (class_exists('TRP_Translate_Press')) {
         $trp = TRP_Translate_Press::get_trp_instance();
         $translate = $trp->get_component('translation_render');
     }
@@ -54,7 +54,7 @@ add_filter("wpseo_metadesc", function ($meta, $presentation) {
     if ($presentation->model->object_sub_type == "artist") {
         foreach ($blocks as $block) {
             if ($block["blockName"] === "acf/artist-content") {
-                if(class_exists('TRP_Translate_Press')){
+                if (class_exists('TRP_Translate_Press')) {
                     $string = apply_filters('the_content', $block["attrs"]["data"]['content']);
                     $translation = $translate->translate_page($string);
                     return $translation;
@@ -68,7 +68,7 @@ add_filter("wpseo_metadesc", function ($meta, $presentation) {
     if ($presentation->model->object_sub_type != "artist") {
         foreach ($blocks as $block) {
             if ($block["blockName"] === "acf/text-content") {
-                if(class_exists('TRP_Translate_Press')){
+                if (class_exists('TRP_Translate_Press')) {
                     $string = apply_filters('the_content', $block["attrs"]["data"]['content']);
                     $translation = $translate->translate_page($string);
                     return $translation;
@@ -79,8 +79,19 @@ add_filter("wpseo_metadesc", function ($meta, $presentation) {
         }
     }
 
-
-
     return $meta;
 },
     10, 2);
+
+add_action('save_post', 'set_default_thumbnail_image');
+
+function set_default_thumbnail_image($post_id){
+    $default_image_id = get_field('open_graph_default_image', 'option');
+
+    if(!has_post_thumbnail($post_id) && $default_image_id){
+        set_post_thumbnail($post_id, $default_image_id);
+    }
+}
+{
+    
+}
