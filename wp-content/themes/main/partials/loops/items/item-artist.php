@@ -11,7 +11,7 @@ $count = $args['count'];
    data-aos-easing="ease-in-out"
    data-aos-offset="10"
    data-aos-anchor="center-center">
-    <h2 class="absolute right-2 bottom-2 left-2 z-10 text-xl uppercase tracking-widest text-current group-focus-visible:text-zinc-50 drop-shadow-md transition-all duration-300 group-focus-visible:duration-300 ease-in font-header text-stroke-zinc-50 group-focus-visible:text-stroke-transparent group-hover:text-stroke-transparent group-hover:text-zinc-50 lg:text-stroke-2 lg:right-6 lg:bottom-6 lg:left-6 lg:text-4xl lg:text-transparent">
+    <h2 class="absolute right-2 bottom-2 left-2 z-10 text-xl uppercase tracking-widest text-current group-focus-visible:text-white drop-shadow-md transition-all duration-300 group-focus-visible:duration-300 ease-in font-header text-white group-focus-visible:text-stroke-transparent group-hover:text-stroke-transparent group-hover:text-white lg:text-stroke-2 lg:right-6 lg:bottom-6 lg:left-6 lg:text-4xl lg:text-transparent lg:text-stroke-white">
         <?= $item->post_title ?>
     </h2>
     <div class="h-full group-focus-visible:brightness-75 brightness-100 transition duration-300 ease-in-out group-hover:brightness-75">

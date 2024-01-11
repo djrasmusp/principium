@@ -17,7 +17,7 @@
         },
         {
           "name": "Page - Text - Downplayed",
-          "color": "#52525b",
+          "color": "#a1a1aa",
           "slug": "page-text-downplayed"
         },
         {
@@ -57,7 +57,7 @@
         },
         {
           "name": "Menu - Background - Mobile",
-          "color": "#222",
+          "color": "#000",
           "slug": "menu-bg-mobile"
         },
         {
