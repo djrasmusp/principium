@@ -37,13 +37,13 @@ if (!class_exists('BLOCK_ARTIST_CONTENT')) {
             <section class="<?= $this->get_class_name() ?>" id="<?= $this->get_id() ?>">
                 <article class="relative z-10 block">
                     <div class="flex flex-col lg:flex-row">
-                        <div class="w-full max-w-5xl border-r px-6 py-6 leading-loose prose divide-page-border lg:px-16 lg:py-16 <?= $this->get_prose_style() ?>"
+                        <div class="w-full max-w-3xl lg:max-w-5xl lg:border-r px-6 py-6 leading-loose prose lg:divide-page-border md:px-16 md:py-16 <?= $this->get_prose_style() ?>"
                              itemprop="mainEntityOfPage">
                             <?= get_field('content') ?>
                         </div>
-                        <div class="flex h-full w-full flex-col divide-y divide-page-border">
+                        <div class="flex h-full w-full flex-col lg:divide-y divide-page-border">
                             <?php if (wp_get_theme()->get('Name') == 'The Night') :  ?>
-                                <div class="flex-1 pt-6 pr-6 pb-6 pl-6 lg:pr-auto lg:pt-16 lg:pb-16 lg:pl-16">
+                                <div class="flex-1 pt-6 pr-6 pb-6 pl-6 lg:pr-auto md:pt-16 md:pb-16 md:pl-16">
                                     <h2 class="max-w-sm text-2xl uppercase text-page-text font-header tracking-full"><?= sprintf(__('Booking af %s', 'main-theme'), $this->post->post_title) ?></h2>
                                     <ul class="mt-8 flex flex-col gap-4 lg:mt-8">
                                         <li>
@@ -64,7 +64,7 @@ if (!class_exists('BLOCK_ARTIST_CONTENT')) {
                                 </div>
                             <?php endif; ?>
                             <div class="flex-1 pt-16 pb-16 pl-16 lg:block">
-                                <ul>
+                                <ul class="text-center lg:text-left">
                                     <?php if ($social_medias = get_field('medias')): ?>
                                         <li class="mb-4">
                                             <div class="inline text-2xl uppercase leading-relaxed outline bg-header-bg text-header-text font-header outline-[12px] outline-header-bg tracking-full">

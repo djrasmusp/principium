@@ -34,10 +34,10 @@ if (!class_exists('BLOCK_PERSONAL')) {
             <section class="<?= $this->get_class_name() ?> my-16" id="<?= $this->get_id() ?>">
                 <header class="relative h-full overflow-hidden inline-flex items-center">
                     <div class="relative flex items-center h-full">
-                        <h3 class="text-xl px-6 lg:text-[2rem] lg:px-0 tracking-wider text-page-text lg:ml-16 lg:mr-32 uppercase block font-header"><?= $this->get_title() ?></h3>
+                        <h3 class="text-xl px-6 md:text-[2rem] md:px-0 tracking-wider text-page-text md:ml-16 md:mr-32 uppercase block font-header"><?= $this->get_title() ?></h3>
                     </div>
                 </header>
-                <div class="grid gap-8 grid-cols-1 lg:grid-cols-3 mt-8">
+                <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 md:gap-y-12">
                     <?php foreach ($this->get_personal() as $person) :
                         if($person['phone']) {
                             $phoneUtil = \libphonenumber\PhoneNumberUtil::getInstance();
@@ -47,7 +47,7 @@ if (!class_exists('BLOCK_PERSONAL')) {
                             <?= wp_get_attachment_image($person['image'], 'large', false, array('alt' => $person['name'],
                                 'class' => 'object-cover w-full aspect-square'
                             )) ?>
-                            <div class="relative px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-start gap-x-4">
+                            <div class="relative px-6 md:px-16 lg:px-8 flex flex-col lg:flex-row justify-between items-start gap-x-4">
                                 <div>
                                     <h4 class="text-xl text-page-text font-header uppercase mt-2"><?= $person['name'] ?></h4>
                                     <span class="text-sm text-page-text-downplayed"><?= $person['position'] ?></span>

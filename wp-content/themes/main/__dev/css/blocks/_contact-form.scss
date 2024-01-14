@@ -1,0 +1,38 @@
+.contact-form-block {
+  label {
+    @apply block text-sm font-medium uppercase leading-6 tracking-widest text-page-text font-header;
+  }
+
+  input, textarea {
+    @apply block w-full rounded-md border-0 placeholder:text-zinc-400 text-zinc-900 shadow-sm ring-1 ring-inset ring-zinc-300 py-1.5 focus-visible:ring-zinc-950 focus-visible:ring-2 focus-visible:ring-inset sm:text-sm sm:leading-6;
+
+    &:read-only {
+      @apply pointer-events-none text-page-text-downplayed focus-visible:ring-1 focus-visible:ring-zinc-300 cursor-default font-medium;
+    }
+  }
+
+
+  textarea {
+    min-height: 3lh;
+    max-height: 8lh;
+  }
+
+  .just-validate-error-label {
+    @apply mt-1 text-xs px-2 text-red-500;
+  }
+
+  .input:Has(input:required) {
+    label {
+     &:after {
+       content:' *';
+       @apply text-page-text-downplayed;
+     }
+    }
+  }
+
+  .input:has(.just-validate-error-label) {
+    input {
+      @apply outline outline-red-500;
+    }
+  }
+}

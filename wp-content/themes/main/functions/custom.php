@@ -4,16 +4,14 @@
  * View Count for resources (blog posts)
  */
 
-use Illuminate\Support\Str;
-
 /**
  * Removes pointer events from images
  */
-add_filter( "wp_get_attachment_image_attributes", function ( $attr ) {
-	$attr["class"] = $attr["class"] . " pointer-events-none";
+add_filter("wp_get_attachment_image_attributes", function ($attr) {
+    $attr["class"] = $attr["class"] . " pointer-events-none";
 
-	return $attr;
-} );
+    return $attr;
+});
 
 add_filter("body_class", function ($classes) {
     $classes[] = "overscroll-none";
@@ -23,21 +21,25 @@ add_filter("body_class", function ($classes) {
     return $classes;
 });
 
-function load_template_part( $template_name, $part_name = null, $args = [] ) {
-	ob_start();
-	get_template_part( $template_name, $part_name, $args );
-	$content = ob_get_contents();
-	ob_end_clean();
+function load_template_part($template_name, $part_name = null, $args = [])
+{
+    ob_start();
+    get_template_part($template_name, $part_name, $args);
+    $content = ob_get_contents();
+    ob_end_clean();
 
-	return $content;
+    return $content;
 }
 
-function get_post_text($post_content) : string {
-    $blocks = parse_blocks($post_content);
-    foreach ($blocks as $block) {
-        if ($block["blockName"] === "acf/text-content") {
-            return strip_tags($block["attrs"]["data"]['content'], '<br>');
-        }
+add_filter('register_post_type_args', function ($args, $post_type) {
+    if ($post_type == 'artist') {
+        $args['template'] = [
+            ['acf/artist-hero'],
+            ['acf/artist-content'],
+            ['acf/artist-slider']
+        ];
+        return $args;
     }
-}
 
+    return $args;
+}, 10, 2);

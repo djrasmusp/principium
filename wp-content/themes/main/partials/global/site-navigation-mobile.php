@@ -33,7 +33,7 @@ $artists    = get_posts( [
     x-transition:leave-start="translate-y-0"
     x-transition:leave-end="-translate-y-full"
 >
-    <div class="container h-full p-16 pt-32 pb-8 overflow-y-auto">
+    <div class="container mx-auto h-full p-16 pt-32 pb-8 overflow-y-auto">
         <div class="flex flex-col justify-between h-full">
             <?php if ( $navigation->isNotEmpty() ) : ?>
                 <nav>

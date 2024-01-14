@@ -36,10 +36,10 @@ if(!class_exists('BLOCK_ARTIST_HERO')) {
                     <div class="absolute flex lg:flex-row flex-col-reverse justify-between w-full items-center bottom-0 left-0 z-10">
                         <header class="min-h-1/6 w-full lg:max-w-fit bg-header-bg flex items-center" data-aos="slide-right"
                                 data-aos-duration="700" data-aos-once="true" data-aos-easing="ease-in-out-sine">
-                            <h1 class="w-full text-[2rem] lg:text-[4rem] text-center lg:text-left tracking-[0.4rem] lg:px-16 uppercase block text-header-text font-header"
+                            <h1 class="w-full text-[2rem] md:text-[4rem] text-center lg:text-left tracking-[0.4rem] md:px-16 uppercase block text-header-text font-header"
                                 itemprop="name"><?= $this->post->post_title ?></h1>
                         </header>
-                        <div class="lg:mr-16 h-24 lg:h-auto">
+                        <div class="md:mr-16 h-24 lg:h-auto">
                             <?php get_template_part('partials/fragments/fragment', 'arrow') ?>
                         </div>
                     </div>

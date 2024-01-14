@@ -63,5 +63,11 @@ export function  componentMenus() {
                 return this.show_artist_mobile;
             },
         },
+
+        footer_index: {
+            [":class"]() {
+                return (this.show_artist_menu) ? 'z-20' : 'z-30'
+            }
+        }
     }))
 }

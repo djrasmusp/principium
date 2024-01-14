@@ -34,7 +34,7 @@ if(!class_exists('BLOCK_TEXT_CONTENT')){
         public function block_template()
         { ?>
             <section class="<?= $this->get_class_name() ?>" id="<?= $this->get_id() ?>">
-                <div class="px-6 lg:px-16">
+                <div class="px-6 md:px-16">
                     <div class="prose <?= $this->get_prose_style() ?> max-w-3xl">
                         <?= get_field('content') ?>
                     </div>

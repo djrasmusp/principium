@@ -489,24 +489,23 @@
             "endpoint": 0
         },
         {
-            "key": "field_6530127978857",
-            "label": "WP Core Blocks",
-            "name": "wp_core_blocks",
+            "key": "field_65a300764fd8a",
+            "label": "Contact Form Email",
+            "name": "contact_form_email",
             "aria-label": "",
-            "type": "true_false",
+            "type": "email",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "Aktiver",
-            "ui_off_text": "Deaktiver",
-            "ui": 1
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_65a032f37ce52",
@@ -532,6 +531,26 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "medium"
+        },
+        {
+            "key": "field_6530127978857",
+            "label": "WP Core Blocks",
+            "name": "wp_core_blocks",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Aktiver",
+            "ui_off_text": "Deaktiver",
+            "ui": 1
         }
     ],
     "location": [
@@ -567,5 +586,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1704997649
+    "modified": 1705248307
 }
