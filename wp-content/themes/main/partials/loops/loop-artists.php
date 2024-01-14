@@ -1,4 +1,4 @@
-<div class="grid grid-cols-2 lg:grid-cols-3 grid-flow-row">
+<div class="grid grid-cols-2 md:grid-cols-3 grid-flow-row">
     <?php
 
     $sorting = ($args['random']) ? array('sorting' => 'ASC', 'rand' => 'rand') : array('title' => 'ASC');

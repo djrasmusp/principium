@@ -534,7 +534,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "all"
+                "value": "acf\/personal"
             }
         ]
     ],
@@ -547,5 +547,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1704913137
+    "modified": 1705244409
 }

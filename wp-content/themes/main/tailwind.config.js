@@ -14,6 +14,9 @@ module.exports = {
     content: purse_files,
     theme: {
         extend: {
+            screens: {
+                'lg': '1025px',
+            },
             colors: tailpress.colorMapper(tailpress.theme('settings.color.palette', theme)),
             spacing: {
                 "1/5": "20%",

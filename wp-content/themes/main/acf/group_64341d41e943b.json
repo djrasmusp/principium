@@ -50,6 +50,13 @@
                 "operator": "==",
                 "value": "acf\/contact-form"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/artist-booking-form"
+            }
         ]
     ],
     "menu_order": 0,
@@ -61,5 +68,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681137014
+    "modified": 1705244556
 }

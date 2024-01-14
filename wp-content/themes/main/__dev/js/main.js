@@ -15,6 +15,7 @@ import {componentLottie} from "components/component.lottie";
 import {blockVideo} from "blocks/block.video";
 import {componentSplashPage} from "./components/component.splash-page";
 import {componentMenus} from "./components/component.menus";
+import {blockContactForm} from "./blocks/block.contact-form";
 
 document.addEventListener("DOMContentLoaded", function () {
     AOS.init();
@@ -35,6 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
     componentCarousels()
     componentSpotify()
     blockVideo()
+    blockContactForm()
+
+    scrollToContent()
 
     Alpine.start()
 });

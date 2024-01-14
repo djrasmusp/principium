@@ -96,6 +96,11 @@
           "slug": "button-text"
         },
         {
+          "name": "Button - Border",
+          "color": "#fff",
+          "slug": "button-border"
+        },
+        {
           "name": "Button - Background - Highlight",
           "color": "#000",
           "slug": "button-bg-highlight"

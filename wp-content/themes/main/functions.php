@@ -23,6 +23,8 @@ require_once "functions/block-helpers.php";
 
 require_once "functions/admin/login.php";
 
+require_once "functions/ajax/ajax-contact-form.php";
+
 require_once "functions/custom.php";
 
 require_once "functions/acf/acf-local-json.php";
