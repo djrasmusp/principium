@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "reset": "rm -rf node_modules && npm i",
-    "zip": "cd .. && zip -ro main_theme.zip main -x 'main/node_modules/*'",
+    "zip": "cd .. && zip -ro principium.zip principium -x 'principium/node_modules/*'",
     "ray": "grep -r --include \"*.php\" \"\\W@\\?ray(\"",
     "staging": "npx mix --production && git save && git push staging main"
   },
