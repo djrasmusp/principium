@@ -1,0 +1,170 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Principium Theme\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-15 19:41+0000\n"
+"PO-Revision-Date: 2024-01-15 19:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: Danish\n"
+"Language: da_DK\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.4.2\n"
+"X-Domain: main-theme"
+
+#: partials/global/footer-copyright.php:29
+msgid "Alle rettigheder forbeholdes"
+msgstr "Alle rettigheder forbeholdes"
+
+#: blocks/artist-slider/artist-slider.php:37
+#: blocks/artist-slider/artist-slider.php:38
+msgid "Andre artister"
+msgstr "Andre artister"
+
+#: blocks/contact-form/contact-form.php:106
+msgid "Andre spørgsmål eller kommentarer"
+msgstr "Andre spørgsmål eller kommentarer"
+
+#: blocks/contact-form/contact-form.php:77
+msgid "Artist"
+msgstr "Artist"
+
+#: partials/global/footer-artists-list.php:28
+msgid "Artister"
+msgstr "Artister"
+
+#: blocks/contact-form/contact-form.php:145
+msgid "Book"
+msgstr "Book"
+
+#: blocks/artist-content/artist-content.php:47
+#: partials/global/footer-artists-list.php:33
+#: partials/global/footer-artists-list.php:36
+#, php-format
+msgid "Booking af %s"
+msgstr "Booking af %s"
+
+#: blocks/contact-form/contact-form.php:86
+msgid "Dato"
+msgstr "Dato"
+
+#: blocks/contact-form/contact-form.php:62
+msgid "Din e-mail"
+msgstr "Din e-mail"
+
+#: blocks/contact-form/contact-form.php:108
+msgid "Din forespørgelse"
+msgstr "Din forespørgelse"
+
+#: blocks/contact-form/contact-form.php:54
+msgid "Din/Jeres organisation"
+msgstr "Din/Jeres organisation"
+
+#: blocks/contact-form/contact-form.php:45
+msgid "Dit navn"
+msgstr "Dit navn"
+
+#: blocks/contact-form/contact-form.php:71
+msgid "Dit telefonnummmer"
+msgstr "Dit telefonnummmer"
+
+#: blocks/artist-content/artist-content.php:59
+msgid "Download pressekit"
+msgstr "Download pressekit"
+
+#: blocks/contact-form/contact-form.php:60
+msgid "E-mail"
+msgstr "E-mail"
+
+#: functions/register-navigations.php:5
+msgid "Footer Menu"
+msgstr "Footer Menu"
+
+#: blocks/artist-slider/artist-slider.php:41
+#: partials/parts/header-artist.php:14
+msgid "Forrige"
+msgstr "Forrige"
+
+#: partials/global/site-skip-link.php:3
+msgid "Gå til hovedindhold"
+msgstr ""
+
+#. URI of the theme
+#. Author URI of the theme
+msgid "https://rasmusp.com"
+msgstr "https://rasmusp.com"
+
+#: blocks/contact-form/contact-form.php:98
+msgid "Hvor skal arrangementet afholdes?"
+msgstr "Hvor skal arrangementet afholdes?"
+
+#: functions/register-navigations.php:6
+msgid "i! Familien"
+msgstr "i! Familien"
+
+#: blocks/contact-form/contact-form.php:148
+msgid "Kontakt"
+msgstr "Kontakt"
+
+#: blocks/contact-form/contact-form.php:95
+msgid "Lokation"
+msgstr "Lokation"
+
+#: blocks/artist-spotify-slider/spotify-slider.php:60
+#: blocks/artist-spotify-slider/spotify-slider.php:66
+#, php-format
+msgid "Lyt til %s af %s"
+msgstr "Lyt til %s af %s"
+
+#: functions/register-navigations.php:4
+msgid "Main Menu"
+msgstr "Main Menu"
+
+#: blocks/artist-spotify-slider/spotify-slider.php:96
+#: blocks/artist-content/artist-content.php:93
+msgid "Musik"
+msgstr "Musik"
+
+#: blocks/contact-form/contact-form.php:43
+msgid "Navn"
+msgstr "Navn"
+
+#: blocks/artist-slider/artist-slider.php:72
+#: partials/parts/header-artist.php:18
+msgid "Næste"
+msgstr "Næste"
+
+#: blocks/contact-form/contact-form.php:51
+msgid "Arrangør"
+msgstr "Arrangør"
+
+#. Name of the theme
+msgid "Principium Theme"
+msgstr "Principium Theme"
+
+#. Author of the theme
+msgid "Rasmus P"
+msgstr "Rasmus P"
+
+#: blocks/contact-form/contact-form.php:123
+msgid "Send forepørgelse"
+msgstr "Send forepørgelse"
+
+#: blocks/artist-content/artist-content.php:71
+msgid "Social Medier"
+msgstr "Social Medier"
+
+#: functions/ajax/ajax-contact-form.php:341
+msgid "Tak for din henvendelse. Du hører snart fra os."
+msgstr "Tak for din henvendelse. Du hører snart fra os."
+
+#: blocks/contact-form/contact-form.php:68
+msgid "Telefonnummer"
+msgstr "Telefonnummer"
+
+#. Description of the theme
+msgid "This theme is the primary theme for all Idol inc. websites."
+msgstr "This theme is the primary theme for all Idol inc. websites."
