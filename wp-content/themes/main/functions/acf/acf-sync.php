@@ -4,7 +4,7 @@ function get_acf_sync_count(){
 
 	$sync = array();
 
-
+    if( ! class_exists('ACF') ) return;
 
 	if ( function_exists('acf_get_local_json_files') && acf_get_local_json_files() ) {
 

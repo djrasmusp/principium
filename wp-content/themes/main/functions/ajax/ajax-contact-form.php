@@ -338,7 +338,7 @@ function send_contact_form()
 
     wp_mail($to, $subject, $body, $headers);
 
-    wp_send_json_success("<p class='mt-2 text-sm text-page-text'>" . __("Tak for din henvendelse. Du hører snart fra os.", "main-theme") . "</p>");
+    wp_send_json_success("<p class='mt-2 text-sm text-page-text'>" . __("Thank you for your inquiry. You will hear from us soon.", "main-theme") . "</p>");
     wp_die();
 
 }

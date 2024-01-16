@@ -1,4 +1,5 @@
 <?php
+if( class_exists('ACF') ) :
     switch (get_field('analytics_script', 'option')){
         case 'ga4':
             echo '<link rel="dns-prefetch" href="//www.googletagmanager.com/" />';
@@ -8,4 +9,5 @@
             break;
         default:
     }
+endif;
 

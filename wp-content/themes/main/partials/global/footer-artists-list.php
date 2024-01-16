@@ -25,15 +25,15 @@ $artists = get_posts(array(
     <nav>
         <ul class="grid grid-cols-1 lg:grid-cols-2 gap-y-4 gap-x-8"
             role="list"
-            aria-label="<?= __('Artister', 'main-theme') ?>">
+            aria-label="<?= __('Artist Roster', 'main-theme') ?>">
             <?php foreach ($artists as $artist) : ?>
                 <li class="text-center lg:text-left text-sm tracking-widest font-header uppercase" itemscope itemtype="http://schema.org/MusicGroup">
                     <a
                             href="<?= get_permalink($artist) ?>"
-                            title="<?= sprintf(__('Booking af %s', 'main-theme'), $artist->post_title) ?>"
+                            title="<?= sprintf(__('Book %s', 'main-theme'), $artist->post_title) ?>"
                             itemprop="url"
                             class="text-zinc-400 transition-all hocus:bg-zinc-50 hocus:text-darkgrey ring-4 ring-transparent hocus:ring-zinc-50 focus-visible:outline-0">
-                        <span itemprop="name"><?= sprintf(__('Booking af %s', 'main-theme'), $artist->post_title) ?></span>
+                        <span itemprop="name"><?= sprintf(__('Book %s', 'main-theme'), $artist->post_title) ?></span>
                     </a>
                 </li>
             <?php endforeach; ?>

@@ -26,7 +26,7 @@ $family_navigation = (new Navi())->build('family');
                class="group text-xs text-zinc-700 hocus:text-zinc-400 focus-visible:outline-0 group transition-all duration-0">created
                 by: <span
                         class="font-bold uppercase group-hover:animate-rasmusp group-focus-visible:animate-rasmusp">Rasmus P</span>.</a>
-            <span class="text-zinc-500 text-xs">&copy; <?= date( 'Y' ) ?> <span class="text-zinc-400 font-bold"><?= get_bloginfo('name') ?></span>. <?= __('Alle rettigheder forbeholdes', 'main-theme') ?></span>
+            <span class="text-zinc-500 text-xs">&copy; <?= date( 'Y' ) ?> <span class="text-zinc-400 font-bold"><?= get_bloginfo('name') ?></span>. <?= __('All rights reserved', 'main-theme') ?></span>
         </div>
     </div>
 </div>

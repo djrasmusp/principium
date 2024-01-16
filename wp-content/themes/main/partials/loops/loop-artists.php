@@ -1,7 +1,7 @@
 <div class="grid grid-cols-2 md:grid-cols-3 grid-flow-row">
     <?php
 
-    $sorting = ($args['random']) ? array('sorting' => 'ASC', 'rand' => 'rand') : array('title' => 'ASC');
+    $sorting = (isset($args['random']) && $args['random']) ? array('sorting' => 'ASC', 'rand' => 'rand') : array('title' => 'ASC');
 
     $delay_in_ms = 0;
     $counter = 1;

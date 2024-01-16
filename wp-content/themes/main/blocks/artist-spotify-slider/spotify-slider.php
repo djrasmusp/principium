@@ -57,13 +57,13 @@ if (!class_exists('BLOCK_ARTIST_SLIDER')) {
                                                         <button type="button"
                                                                 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block size-16 transition duration-450 opacity-40 group-hover:opacity-100 group-[.pause]:opacity-100 focus-visible:opacity-100 focus-visible:outline-0 touch-manipulation umami--click--music-<?= sanitize_title($track->name) ?>"
                                                                 data-audio="<?= $track->preview_url ?>"
-                                                                title="<?= sprintf(__('Lyt til %s af %s', 'main-theme'), $track->name, implode(', ', array_column($track->artists, 'name'))) ?>"
+                                                                title="<?= sprintf(__('Listen to %s by %s', 'main-theme'), $track->name, implode(', ', array_column($track->artists, 'name'))) ?>"
                                                                 aria-label="Play">
                                                             <img src="<?= THEME_ICONS ?>/play.svg" class="injectable pointer-events-none size-16 fill-zinc-50 group-[.pause]:hidden">
                                                             <img src="<?= THEME_ICONS ?>/pause.svg" class="injectable pointer-events-none hidden h-16 w-16 fill-zinc-50 group-[.pause]:block">
                                                         </button>
                                                     <?php endif; ?>
-                                                    <a class="absolute bottom-4 right-4 drop-shadow-md rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" title="<?= sprintf(__('Lyt til %s af %s', 'main-theme'), $track->name, implode(', ', array_column($track->artists, 'name'))) ?>" href="<?= $track->external_urls->spotify ?>" target="_blank"><img src="<?= THEME_ICONS ?>/spotify.svg" class="injectable size-4 fill-spotify"></a>
+                                                    <a class="absolute bottom-4 right-4 drop-shadow-md rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" title="<?= sprintf(__('Listen to %s by %s', 'main-theme'), $track->name, implode(', ', array_column($track->artists, 'name'))) ?>" href="<?= $track->external_urls->spotify ?>" target="_blank"><img src="<?= THEME_ICONS ?>/spotify.svg" class="injectable size-4 fill-spotify"></a>
                                                 </div>
                                             </div>
                                             <h3 class="relative my-4 text-center text-xs md:text-sm uppercase font-header line-clamp-2 text-page-text"
@@ -93,7 +93,7 @@ if (!class_exists('BLOCK_ARTIST_SLIDER')) {
 
         protected function get_block_title(): string
         {
-            return get_field('title') ?: __('Musik', 'main-theme');
+            return get_field('title') ?: __('Music', 'main-theme');
         }
     }
 }

@@ -38,68 +38,83 @@ if (!class_exists('BLOCK_PERSONAL')) {
                     </div>
                 </header>
                 <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 md:gap-y-12">
-                    <?php foreach ($this->get_personal() as $person) :
-                        if($person['phone']) {
-                            $phoneUtil = \libphonenumber\PhoneNumberUtil::getInstance();
-                            $phone = $phoneUtil->parse($person['phone'], $person['country_code']);
-                        }?>
-                        <div>
-                            <?= wp_get_attachment_image($person['image'], 'large', false, array('alt' => $person['name'],
-                                'class' => 'object-cover w-full aspect-square'
-                            )) ?>
-                            <div class="relative px-6 md:px-16 lg:px-8 flex flex-col lg:flex-row justify-between items-start gap-x-4">
-                                <div>
-                                    <h4 class="text-xl text-page-text font-header uppercase mt-2"><?= $person['name'] ?></h4>
-                                    <span class="text-sm text-page-text-downplayed"><?= $person['position'] ?></span>
-                                    <ul class="flex flex-col  mt-2">
-                                        <?php if ($person['phone']) : ?>
-                                            <li class="flex gap-1 items-center">
-                                                <img src="<?= THEME_ICONS ?>/phone.svg" class="injectable size-3 fill-page-border-highlight"/>
-                                                <a class="inline-flex gap-x-2 items-center px-2 text-page-text hocus:bg-header-bg group"
-                                                   href="<?= $phoneUtil->format($phone, \libphonenumber\PhoneNumberFormat::RFC3966) ?>"
-                                                   data-no-translation-href>
-                                                    <span class="uppercase leading-relaxed font-header tracking-wider group-hover:text-header-text group-focus-visible:text-header-text"><?= $phoneUtil->format($phone, \libphonenumber\PhoneNumberFormat::INTERNATIONAL) ?></span></a>
-                                            </li>
-                                        <?php endif; ?>
-                                        <?php if($person['wechat']) : ?>
-                                            <li class="flex gap-1 items-center">
-                                                <img src="<?= THEME_ICONS ?>/wechat.svg" class="injectable w-4 h-4 fill-page-border-highlight"/>
-                                                <a class="inline-flex gap-x-2 items-center text-page-text px-2 hocus:bg-header-bg group"
-                                                   href="weixin://dl/chat?<?= $person['wechat'] ?>" target="_blank" data-no-translation-href>
-                                                    <span class="uppercase leading-relaxed font-header tracking-wider group-hover:text-header-text group-focus-visible:text-header-text"><?= $person['whatsapp'] ?></span></a>
-                                            </li>
-                                        <?php endif; ?>
-                                        <?php if ($person['email']) : ?>
-                                            <li class="flex gap-1 items-center">
-                                                <img src="<?= THEME_ICONS ?>/e-mail.svg" class="injectable w-3 h-3 fill-zinc-400"/>
-                                                <a class="inline-flex gap-x-2 items-center text-page-text px-2 hocus:bg-header-bg group"
-                                                   href="mailto:<?= $person['email'] ?>" data-no-translation-href>
-                                                    <span class="uppercase leading-relaxed font-header tracking-wider group-hover:text-header-text group-focus-visible:text-header-text"><?= $person['email'] ?></span></a>
-                                            </li>
-                                        <?php endif; ?>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <?php if ($person['socials']) : ?>
-                                        <ul class="flex gap-x-4 items-start mt-4 mr-2 socials">
-                                            <?php foreach ($person['socials'] as $social) : ?>
-                                                <li>
-                                                    <a href="<?= $social['url'] ?>"
-                                                       title="<?= bloginfo('name') ?>'s <?= $social['media'] ?>"
-                                                       target="_blank"
+                    <?php if (have_rows('personal')):
+                        while (have_rows('personal')) : the_row();
+                            $name = get_sub_field('name');
+                            $position = get_sub_field('position');
+                            $image = get_sub_field('image');
+                            $email = get_sub_field('email');
+                            $phone = get_sub_field('phone');
+                            $country_code = get_sub_field('country_code');
+                            $wechat = get_sub_field('wechat');
+                            $socials = get_sub_field('socials');
+
+                            if ($phone) {
+                                $phoneUtil = \libphonenumber\PhoneNumberUtil::getInstance();
+                                $phone = $phoneUtil->parse($phone, $country_code);
+                            } ?>
+                            <div>
+                                <?= wp_get_attachment_image($image, 'large', false, array('alt' => $name,
+                                    'class' => 'object-cover w-full aspect-square'
+                                )) ?>
+                                <div class="relative px-6 md:px-16 lg:px-8 flex flex-col lg:flex-row justify-between items-start gap-x-4">
+                                    <div>
+                                        <h4 class="text-xl text-page-text font-header uppercase mt-2"><?= $name ?></h4>
+                                        <span class="text-sm text-page-text-downplayed"><?= $position ?></span>
+                                        <ul class="flex flex-col  mt-2">
+                                            <?php if ($phone) : ?>
+                                                <li class="flex gap-1 items-center">
+                                                    <img src="<?= THEME_ICONS ?>/phone.svg"
+                                                         class="injectable size-3 fill-page-border-highlight"/>
+                                                    <a class="inline-flex gap-x-2 items-center px-2 text-page-text hocus:bg-header-bg group"
+                                                       href="<?= $phoneUtil->format($phone, \libphonenumber\PhoneNumberFormat::RFC3966) ?>"
                                                        data-no-translation-href>
-                                                        <img
-                                                                src="<?= THEME_ICONS ?>/<?= $social['media'] ?>.svg"
-                                                                class="w-5 h-5 transition-all duration-450 injectable fill-page-text">
-                                                    </a>
+                                                        <span class="uppercase leading-relaxed font-header tracking-wider group-hover:text-header-text group-focus-visible:text-header-text"><?= $phoneUtil->format($phone, \libphonenumber\PhoneNumberFormat::INTERNATIONAL) ?></span></a>
                                                 </li>
-                                            <?php endforeach; ?>
+                                            <?php endif; ?>
+                                            <?php if ($wechat) : ?>
+                                                <li class="flex gap-1 items-center">
+                                                    <img src="<?= THEME_ICONS ?>/wechat.svg"
+                                                         class="injectable w-4 h-4 fill-page-border-highlight"/>
+                                                    <a class="inline-flex gap-x-2 items-center text-page-text px-2 hocus:bg-header-bg group"
+                                                       href="weixin://dl/chat?<?= $wechat ?>" target="_blank"
+                                                       data-no-translation-href>
+                                                        <span class="uppercase leading-relaxed font-header tracking-wider group-hover:text-header-text group-focus-visible:text-header-text"><?= $person['whatsapp'] ?></span></a>
+                                                </li>
+                                            <?php endif; ?>
+                                            <?php if ($email) : ?>
+                                                <li class="flex gap-1 items-center">
+                                                    <img src="<?= THEME_ICONS ?>/e-mail.svg"
+                                                         class="injectable w-3 h-3 fill-zinc-400"/>
+                                                    <a class="inline-flex gap-x-2 items-center text-page-text px-2 hocus:bg-header-bg group"
+                                                       href="mailto:<?= $email ?>" data-no-translation-href>
+                                                        <span class="uppercase leading-relaxed font-header tracking-wider group-hover:text-header-text group-focus-visible:text-header-text"><?= $email ?></span></a>
+                                                </li>
+                                            <?php endif; ?>
                                         </ul>
-                                    <?php endif; ?>
+                                    </div>
+                                    <div>
+                                        <?php if ($socials) : ?>
+                                            <ul class="flex gap-x-4 items-start mt-4 mr-2 socials">
+                                                <?php foreach ($socials as $social) : ?>
+                                                    <li>
+                                                        <a href="<?= $social['url'] ?>"
+                                                           title="<?= $name ?>'s <?= $social['media'] ?>"
+                                                           target="_blank"
+                                                           data-no-translation-href>
+                                                            <img
+                                                                    src="<?= THEME_ICONS ?>/<?= $social['media'] ?>.svg"
+                                                                    class="w-5 h-5 transition-all duration-450 injectable fill-page-text">
+                                                        </a>
+                                                    </li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php endforeach; ?>
+                        <?php endwhile;
+                    endif; ?>
                 </div>
             </section>
             <?php
@@ -108,11 +123,6 @@ if (!class_exists('BLOCK_PERSONAL')) {
         protected function get_title()
         {
             return get_field('title');
-        }
-
-        protected function get_personal()
-        {
-            return get_field('personal');
         }
     }
 }

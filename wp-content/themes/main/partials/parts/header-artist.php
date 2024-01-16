@@ -11,11 +11,11 @@
     <div class="relative flex items-center justify-center gap-4 w-[20%] my-8 md:my-0 mx-4 md:px-0 splide__arrows">
         <button class="opacity-30 hover:opacity-100 prev touch-manipulation splide__arrow splide__arrow--prev">
             <img src="<?= THEME_ICONS ?>/chevron-left.svg" class="injectable fill-header-text size-8 lg:size-16">
-            <span class="sr-only"><?= __('Forrige', 'main-theme') ?></span>
+            <span class="sr-only"><?= __('Previous', 'main-theme') ?></span>
         </button>
         <button class="opacity-30 hover:opacity-100 next touch-manipulation splide__arrow splide__arrow--next">
             <img src="<?= THEME_ICONS ?>/chevron-right.svg" class="injectable fill-header-text size-8 lg:size-16">
-            <span class="sr-only"><?= __('Næste', 'main-theme') ?></span>
+            <span class="sr-only"><?= __('Next', 'main-theme') ?></span>
         </button>
     </div>
     <?php endif; ?>

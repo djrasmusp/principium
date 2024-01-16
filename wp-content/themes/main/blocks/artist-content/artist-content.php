@@ -44,7 +44,7 @@ if (!class_exists('BLOCK_ARTIST_CONTENT')) {
                         <div class="flex h-full w-full flex-col lg:divide-y divide-page-border">
                             <?php if (wp_get_theme()->get('Name') == 'The Night') :  ?>
                                 <div class="flex-1 pt-6 pr-6 pb-6 pl-6 lg:pr-auto md:pt-16 md:pb-16 md:pl-16">
-                                    <h2 class="max-w-sm text-2xl uppercase text-page-text font-header tracking-full"><?= sprintf(__('Booking af %s', 'main-theme'), $this->post->post_title) ?></h2>
+                                    <h2 class="max-w-sm text-2xl uppercase text-page-text font-header tracking-full"><?= sprintf(__('Book %s', 'main-theme'), $this->post->post_title) ?></h2>
                                     <ul class="mt-8 flex flex-col gap-4 lg:mt-8">
                                         <li>
                                             <button type="button"
@@ -56,7 +56,7 @@ if (!class_exists('BLOCK_ARTIST_CONTENT')) {
                                                 <a href="<?= $presskit ?>" target="_blank"
                                                    class="flex lg:inline-flex w-full lg:w-auto gap-2 items-center justify-center text-center py-4 px-8 bg-transparent border border-zinc-300 hover:border-zinc-400 text-zinc-700 font-header uppercase tracking-widest group transition-all duration-300 focus-visible:outline-4 focus-visible:outline-zinc-400 umami--click--<?= $this->post->post_name ?>-presskit"
                                                    data-no-translation-href>
-                                                    <span class="text-xs"><?= __('Download pressekit', 'main-theme') ?></span>
+                                                    <span class="text-xs"><?= __('Download press kit', 'main-theme') ?></span>
                                                 </a>
                                             </li>
                                         <?php endif; ?>
@@ -68,7 +68,7 @@ if (!class_exists('BLOCK_ARTIST_CONTENT')) {
                                     <?php if ($social_medias = get_field('medias')): ?>
                                         <li class="mb-4">
                                             <div class="inline text-2xl uppercase leading-relaxed outline bg-header-bg text-header-text font-header outline-[12px] outline-header-bg tracking-full">
-                                                <span><?= __('Social Medier', 'main-theme') ?></span>
+                                                <span><?= __('Social Media', 'main-theme') ?></span>
                                             </div>
                                         </li>
                                         <?php foreach ($social_medias as $media) :
@@ -90,7 +90,7 @@ if (!class_exists('BLOCK_ARTIST_CONTENT')) {
                                     <?php if ($music_providers = get_field('music_providers')): ?>
                                         <li class="mt-16 mb-4">
                                             <div class="inline text-2xl uppercase leading-relaxed outline bg-header-bg text-header-text font-header outline-[12px] outline-header-bg tracking-full">
-                                                <span><?= __('Musik', 'main-theme') ?></span>
+                                                <span><?= __('Music', 'main-theme') ?></span>
                                             </div>
                                         </li>
                                         <?php foreach ($music_providers as $provider) :

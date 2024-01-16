@@ -1,13 +1,13 @@
 {
-  "name": "rasmusp-boilerplate",
+  "name": "rasmusp-principium-theme",
   "company": "Rasmus P",
   "version": "1.0.0",
-  "description": "Boilerplate for Wordpress",
+  "description": "Principium Theme",
   "main": "index.js",
   "private": true,
   "scripts": {
     "reset": "rm -rf node_modules && npm i",
-    "zip": "cd .. && zip -ro main_theme.zip boilerplate -x 'boilerplate/node_modules/*'",
+    "zip": "cd .. && zip -ro main_theme.zip main -x 'main/node_modules/*'",
     "ray": "grep -r --include \"*.php\" \"\\W@\\?ray(\"",
     "staging": "npx mix --production && git save && git push staging main"
   },
