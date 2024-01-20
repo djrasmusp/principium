@@ -55,6 +55,6 @@ window.cookieStorage = {
         return null;
     },
     setItem(key, value) {
-        document.cookie = key+' = '+encodeURIComponent(value) + '; max-age=' + 60*60*24*60
+        document.cookie = key+' = '+encodeURIComponent(value) + '; max-age=' + 60*60*24*30 + ';path=/;'
     }
 }

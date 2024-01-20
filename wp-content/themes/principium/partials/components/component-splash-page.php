@@ -13,7 +13,7 @@ if (class_exists('TRP_Translate_Press')) :
 
     if (!is_admin()) : ?>
         <div class="inset-0 bg-splash-page-bg absolute z-9999 flex flex-col items-center justify-center "
-             x-data="{ show_splash_page: $persist(true) }"
+             x-data="{ show_splash_page: $persist(true).using(cookieStorage) }"
              x-show.important="show_splash_page"
              x-trap.inert.noscroll="show_splash_page"
              x-cloak
