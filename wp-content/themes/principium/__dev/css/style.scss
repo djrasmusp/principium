@@ -52,3 +52,9 @@
     display: none !important;
   }
 }
+
+
+#wp-admin-bar-wp-environment {
+  pointer-events: none;
+  background: orangered !important;
+}

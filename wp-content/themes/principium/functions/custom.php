@@ -18,6 +18,7 @@ add_filter("body_class", function ($classes) {
     $classes[] = "min-h-screen-ios";
     $classes[] = "min-h-screen";
     $classes[] = "scroll-smooth";
+    $classes[] = "bg-page-bg";
     return $classes;
 });
 

@@ -5,3 +5,14 @@ img[src$=".svg"].attachment-post-thumbnail {
   height: 100% !important;
   object-fit: contain;
 }
+
+#wp-admin-bar-wp-environment {
+  pointer-events: none;
+  &.development {
+    background: orangered !important;
+  }
+
+  &.production {
+    background: seagreen !important;
+  }
+}

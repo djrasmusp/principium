@@ -16,7 +16,7 @@ function send_contact_form()
     }
 
     if (!$to) {
-        wp_send_json_error("No E-mail set", 500);
+        wp_send_json_error("Internal error. Try again later", 500);
         wp_die();
     }
 

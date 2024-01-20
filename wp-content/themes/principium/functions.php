@@ -22,6 +22,7 @@ require_once "functions/register-blocks.php";
 require_once "functions/block-helpers.php";
 
 require_once "functions/admin/login.php";
+require_once "functions/admin/admin-helper.php";
 
 require_once "functions/ajax/ajax-contact-form.php";
 
