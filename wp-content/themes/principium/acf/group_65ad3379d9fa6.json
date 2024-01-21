@@ -1,0 +1,47 @@
+{
+    "key": "group_65ad3379d9fa6",
+    "title": "POST - Indstillinger",
+    "fields": [
+        {
+            "key": "field_65ad3379e06ea",
+            "label": "Indlægget vises i oversigten",
+            "name": "geo-location",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_65ad29d6981c8"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1705849754
+}

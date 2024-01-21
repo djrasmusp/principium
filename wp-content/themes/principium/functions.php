@@ -18,6 +18,7 @@ require_once "functions/scripts.php";
 
 require_once "functions/register-navigations.php";
 require_once "functions/register-blocks.php";
+require_once "functions/geo-control.php";
 
 require_once "functions/block-helpers.php";
 

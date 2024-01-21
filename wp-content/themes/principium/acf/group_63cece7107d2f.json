@@ -3,31 +3,26 @@
     "title": "ARTIST - Indstillinger",
     "fields": [
         {
-            "key": "field_63cece716ada4",
-            "label": "Placering af billede",
-            "name": "image_position",
+            "key": "field_65ad2ae98dab2",
+            "label": "Artisten vises i oversigten",
+            "name": "geo-location",
             "aria-label": "",
-            "type": "select",
+            "type": "clone",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "bottom": "Bund",
-                "center": "Midten",
-                "top": "Top"
-            },
-            "default_value": "center",
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
+            "clone": [
+                "field_65ad29d6981c8"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         },
         {
             "key": "field_63cecfb95e2d6",
@@ -55,26 +50,6 @@
             "ui": 0,
             "ajax": 0,
             "placeholder": ""
-        },
-        {
-            "key": "field_65214278827a6",
-            "label": "Skjul artist fra engelsk side 🇺🇸",
-            "name": "hide_artist_on_en_site",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "Ja",
-            "ui_off_text": "Nej",
-            "ui": 1
         },
         {
             "key": "field_63d7dff8bdaf5",
@@ -115,5 +90,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1696678615
+    "modified": 1705849692
 }

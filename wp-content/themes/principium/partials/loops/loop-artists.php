@@ -10,17 +10,19 @@
         array(
             'post_type' => 'artist',
             'posts_per_page' => -1,
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'geo-location',
+                    'field' => 'slug',
+                    'terms' => get_locale()
+                ),
+            ),
             'meta_query' => array(
                 'hide_artist' => array(
                     'key' => 'hide_artist',
                     'value' => 1,
                     'compare' => '!='
                 ),
-                "hide_artist_on_en" => (get_locale() === 'da_DK') ? [] : [
-                    'key' => 'hide_artist_on_en_site',
-                    "value" => '1',
-                    "compare" => "!="
-                ],
                 'sorting' => array(
                     'key' => 'sorting',
                     'compare' => 'EXISTS'

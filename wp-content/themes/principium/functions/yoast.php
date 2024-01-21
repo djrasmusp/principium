@@ -64,15 +64,14 @@ add_filter("wpseo_metadesc", function ($meta, $presentation) {
 },
     10, 2);
 
-add_action('save_post', 'set_default_thumbnail_image');
+add_filter('wpseo_add_opengraph_images', function($images){
+    if (!has_post_thumbnail() && $default_image_id = get_field('open_graph_default_image', 'option')) {
 
-function set_default_thumbnail_image($post_id){
-    $default_image_id = get_field('open_graph_default_image', 'option');
-
-    if(!has_post_thumbnail($post_id) && $default_image_id){
-        set_post_thumbnail($post_id, $default_image_id);
+        $images->add_image_by_id($default_image_id);
     }
-}
-{
-    
-}
+
+
+    return $images;
+}, 2, 1);
+
+
