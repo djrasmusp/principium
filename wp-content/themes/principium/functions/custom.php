@@ -33,13 +33,19 @@ function load_template_part($template_name, $part_name = null, $args = [])
 }
 
 add_filter('register_post_type_args', function ($args, $post_type) {
-    if ($post_type == 'artist') {
+    if($post_type == 'artist'){
         $args['template'] = [
             ['acf/artist-hero'],
             ['acf/artist-content'],
             ['acf/artist-slider']
         ];
-        return $args;
+    }
+
+    if($post_type == 'post') {
+        $args['template'] = [
+            ['acf/single-hero'],
+            ['acf/text-content']
+        ];
     }
 
     return $args;
