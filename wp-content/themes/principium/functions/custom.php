@@ -34,6 +34,10 @@ function load_template_part($template_name, $part_name = null, $args = [])
 
 add_filter('register_post_type_args', function ($args, $post_type) {
     if($post_type == 'artist'){
+        if (wp_get_theme()->get('Name') == 'The Night'){
+            $args['rewrite']['slug'] = 'book';
+        }
+
         $args['template'] = [
             ['acf/artist-hero'],
             ['acf/artist-content'],
