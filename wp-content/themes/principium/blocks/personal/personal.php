@@ -46,7 +46,7 @@ if (!class_exists('BLOCK_PERSONAL')) {
                             $email = get_sub_field('email');
                             $phone = get_sub_field('phone');
                             $country_code = get_sub_field('country_code');
-                            $wechat = get_sub_field('wechat');
+                            $wechat = get_sub_field('weChat');
                             $socials = get_sub_field('socials');
 
                             if ($phone) {
@@ -79,7 +79,7 @@ if (!class_exists('BLOCK_PERSONAL')) {
                                                     <a class="inline-flex gap-x-2 items-center text-page-text px-2 hocus:bg-header-bg group"
                                                        href="weixin://dl/chat?<?= $wechat ?>" target="_blank"
                                                        data-no-translation-href>
-                                                        <span class="uppercase leading-relaxed font-header tracking-wider group-hover:text-header-text group-focus-visible:text-header-text"><?= $person['whatsapp'] ?></span></a>
+                                                        <span class="uppercase leading-relaxed font-header tracking-wider group-hover:text-header-text group-focus-visible:text-header-text"><?= $wechat ?></span></a>
                                                 </li>
                                             <?php endif; ?>
                                             <?php if ($email) : ?>
