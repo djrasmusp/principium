@@ -112,3 +112,6 @@ wp-content/themes/principium/vendor/
 wp-content/themes/thenight/assets/
 !wp-content/themes/daylight/
 wp-content/themes/daylight/assets/
+
+# Language backup files
+*.po~
