@@ -111,6 +111,12 @@ if (!class_exists('BLOCK_CONTACT_FORM')) {
                                 <textarea id="tn-comments" name="tn-comments" rows="3" class="form-control"></textarea>
                             </div>
                         </div>
+                        <div class="col-span-full input">
+                            <div class="flex gap-x-4 items-center justify-items-start flex-wrap">
+                                <input type="checkbox" id="tn-dataconsent" name="tn-dataconsent" class="form-control" required>
+                                <label for="tn-dataconsent"><?= sprintf(__('I consent to %s storing and processing the personal information I have provided above.', 'main-theme'), get_bloginfo('name')) ?></label>
+                            </div>
+                        </div>
                         <div class="opacity-0 absolute w-[0px] inset-0 z[-1]">
                             <label for="firstname" aria-hidden="true" class="visually-hidden">firstname <input
                                         name="firstname" type="text" id="firstname" tabindex="-99999"></label>

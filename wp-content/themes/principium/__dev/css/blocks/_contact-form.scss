@@ -3,14 +3,33 @@
     @apply block text-sm font-medium uppercase leading-6 tracking-widest text-page-text font-header;
   }
 
-  input, textarea {
+  input:not([type="checkbox"]), textarea {
     @apply block w-full rounded-md border-0 placeholder:text-zinc-400 text-zinc-900 shadow-sm ring-1 ring-inset ring-zinc-300 py-1.5 focus-visible:ring-zinc-950 focus-visible:ring-2 focus-visible:ring-inset sm:text-sm sm:leading-6;
 
     &:read-only {
       @apply pointer-events-none text-page-text-downplayed focus-visible:ring-1 focus-visible:ring-zinc-300 cursor-default font-medium;
     }
+
   }
 
+  .col-span-full.input:has(input#tn-dataconsent) {
+
+    input[type="checkbox"] {
+      @apply rounded-sm border border-zinc-300;
+
+      & + label {
+        @apply font-medium font-sans tracking-normal text-page-text normal-case max-w-sm md:max-w-max;
+
+        &:after {
+          content: '';
+        }
+      }
+    }
+
+    .just-validate-error-label {
+      @apply basis-full
+    }
+  }
 
   textarea {
     min-height: 3lh;
@@ -21,12 +40,12 @@
     @apply mt-1 text-xs px-2 text-red-500;
   }
 
-  .input:Has(input:required) {
+  .input:has(input:required) {
     label {
-     &:after {
-       content:' *';
-       @apply text-page-text-downplayed;
-     }
+      &:after {
+        content: ' *';
+        @apply text-page-text-downplayed;
+      }
     }
   }
 
