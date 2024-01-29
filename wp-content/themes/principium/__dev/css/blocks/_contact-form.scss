@@ -18,7 +18,7 @@
       @apply rounded-sm border border-zinc-300;
 
       & + label {
-        @apply font-medium font-sans tracking-normal text-page-text normal-case max-w-sm md:max-w-max;
+        @apply font-medium font-sans tracking-normal text-page-text normal-case max-w-sm md:max-w-xl;
 
         &:after {
           content: '';

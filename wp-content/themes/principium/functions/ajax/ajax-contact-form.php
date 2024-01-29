@@ -34,54 +34,12 @@ function send_contact_form()
     $headers[] = "From: " . $name . "<" . $email . ">";
     $headers[] = "Reply-To: " . $name . "<" . $email . ">";
 
-    $body = '<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" >
+    $body = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" style="background:#f4f4f5!important">
 <head>
-    <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<meta name="x-apple-disable-message-reformatting">
-	<title></title>
-	<!--[if mso]> 
-<noscript> 
-<xml> 
-<o:OfficeDocumentSettings> 
-<o:PixelsPerInch>96</o:PixelsPerInch> 
-</o:OfficeDocumentSettings> 
-</xml> 
-</noscript> 
-<![endif]-->
-</head>
-<body>';
-
-    $body .= "<p>This mail is from " . wp_get_theme()->get('Name') . ":</p>";
-
-    $body .= "<p><strong>Artist:</strong> " . $artist . "</p>";
-
-    $body .= "<p><strong>Name:</strong> " . $name . "</p>";
-
-    if (!empty($organizer)) {
-        $body .= "<p><strong>Organizer:</strong> " . $organizer . "</p>";
-    }
-
-    $body .= "<p><strong>Email:</strong> " . $email . "</p>";
-
-    $body .= "<p><strong>Phone:</strong> " . $phone . "</p>";
-
-    if (!empty($date)) {
-        $body .= "<p><strong>Date:</strong> " . date_i18n("j. F Y", strtotime($date)) . "</p>";
-    }
-
-    if (!empty($location)) {
-        $body .= "<p><strong>Location:</strong> " . $location . "</p>";
-    }
-
-    if (!empty($comments)) {
-        $body .= "<p><strong>Comments:</strong> " . $comments . "</p>";
-    }
-
-    $body .= "</body></html>";
-
-    $body = '<!DOCTYPE html PUBLIC " -//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" style="background:#f4f4f5!important"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width">';
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">';
     $body .= '<title>' . $subject . '</title>';
     $body .= '<style>@media only screen {
         html {
@@ -91,11 +49,6 @@ function send_contact_form()
     }
 
     @media only screen and (max-width: 596px) {
-        table.body img {
-            width: auto;
-            height: auto
-        }
-
         table.body center {
             min-width: 0 !important
         }
@@ -121,6 +74,12 @@ function send_contact_form()
         th.small-12 {
             display: inline-block !important;
             width: 100% !important
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        h1 {
+            font-size: 22px
         }
     }</style>
 </head>
@@ -153,27 +112,15 @@ function send_contact_form()
                                    style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
                                 <tbody>
                                 <tr style="padding:0;text-align:left;vertical-align:top">
-                                    <th class="small-6 large-6 columns first" valign="middle"
+                                    <th class="small-12 large-12 columns first last" valign="middle"
                                         style="-moz-box-sizing:border-box;-moz-hyphens:auto;-webkit-box-sizing:border-box;-webkit-hyphens:auto;Margin:0 auto;border-collapse:collapse!important;box-sizing:border-box;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0 auto;padding:0;padding-bottom:32px;padding-left:16px;padding-right:16px;padding-top:32px;text-align:left;vertical-align:middle;width:274px;word-wrap:break-word">
                                         <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
                                             <tbody>
                                             <tr style="padding:0;text-align:left;vertical-align:top">
-                                                <th style="-moz-box-sizing:border-box;-moz-hyphens:auto;-webkit-box-sizing:border-box;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;box-sizing:border-box;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">';
-    $body .= '<h1 style="Margin:0;Margin-bottom:10px;color:#fefefe;font-family:Helvetica,Arial,sans-serif;font-size:34px;font-weight:700;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left;word-wrap:normal">' . get_bloginfo('name') . '</h1>';
-    $body .= '</th>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </th>
-                                    <th class="logo small-6 large-6 columns last" valign="middle"
-                                        style="-moz-box-sizing:border-box;-moz-hyphens:auto;-webkit-box-sizing:border-box;-webkit-hyphens:auto;Margin:0 auto;border-collapse:collapse!important;box-sizing:border-box;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0 auto;padding:0;padding-bottom:32px;padding-left:16px;padding-right:16px;padding-top:32px;text-align:left;vertical-align:middle;width:274px;word-wrap:break-word">
-                                        <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
-                                            <tbody>
-                                            <tr style="padding:0;text-align:left;vertical-align:top">
-                                                <th style="-moz-box-sizing:border-box;-moz-hyphens:auto;-webkit-box-sizing:border-box;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;box-sizing:border-box;color:#0a0a0a;float:right;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">';
-    $body .= '<img src="' . wp_get_attachment_url(get_field("logo", "option"), "medium") . '" height="64px"
-                                                         style="-ms-interpolation-mode:bicubic;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto">';
-    $body .= '</th>
+                                                <th style="-moz-box-sizing:border-box;-moz-hyphens:auto;-webkit-box-sizing:border-box;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;box-sizing:border-box;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+                                                    <h1 style="Margin:0;Margin-bottom:10px;color:#fefefe;font-family:Helvetica,Arial,sans-serif;font-size:24px;font-weight:700;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left;word-wrap:normal">';
+    $body .= get_bloginfo('name');
+    $body .= '</h1></th>
                                             </tr>
                                             </tbody>
                                         </table>

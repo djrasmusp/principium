@@ -36,7 +36,7 @@ if(!class_exists('BLOCK_SINGLE_HERO')) {
                     <div class="absolute flex lg:flex-row flex-col-reverse justify-between w-full items-center bottom-0 left-0 z-10">
                         <header class="min-h-1/6 py-8 w-full lg:max-w-fit bg-header-bg flex flex-col justify-center" data-aos="slide-right"
                                 data-aos-duration="700" data-aos-once="true" data-aos-easing="ease-in-out-sine">
-                            <time datetime="<?= date_i18n('c', $this->post->post_date) ?>" class="text-xs px-8 lg:px-16 uppercase text-header-text font-header"><?= date_i18n('d. M Y', $this->post->post_date) ?></time>
+                            <time datetime="<?= date_i18n('c', strtotime($this->post->post_date)) ?>" class="text-xs px-8 lg:px-16 uppercase text-header-text font-header"><?= date_i18n('d. M Y', strtotime($this->post->post_date)) ?></time>
                             <h1 class="w-full max-w-3xl lg:max-w-5xl text-xl md:text-[2rem]/[1.25] md:py-[1rem] text-pretty text-left px-8 lg:text-left tracking-[0.4rem] lg:px-16 uppercase block text-header-text font-header"
                                 itemprop="name"><?= $this->post->post_title ?></h1>
                         </header>

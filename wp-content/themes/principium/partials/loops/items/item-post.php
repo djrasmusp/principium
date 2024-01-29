@@ -7,8 +7,8 @@ $focus_point = get_field('focus_point', $thumbnail_id) ?? '50% 50%';
    class="blog-post relative aspect-square overflow-hidden transition-all group duration-300 focus-visible:z-50 focus-visible:outline-8 focus-visible:outline-offset-4 focus-visible:ring-4 focus-visible:ring-darkgrey focus-visible:outline-darkgrey umami--click--blog-<?= $post->post_name ?>">
     <div class="absolute right-2 bottom-2 left-2 z-20 lg:right-6 lg:bottom-6 lg:left-6">
         <h2 class="text-base uppercase tracking-widest text-white group-hover:text-white transition-all ease-in font-header duration-450 group-hover:text-stroke-transparent line-clamp-3 lg:text-1xl"><?= $post->post_title ?></h2>
-        <time datetime="<?= date_i18n('c', $post->post_date) ?>"
-              class="text-xs uppercase text-zinc-100 font-header"><?= date_i18n('d. M Y', $post->post_date) ?></time>
+        <time datetime="<?= date_i18n('c', strtotime($post->post_date)) ?>"
+              class="text-xs uppercase text-zinc-100 font-header"><?= date_i18n('d. M Y', strtotime($post->post_date)) ?></time>
     </div>
     <div class="h-full">
         <div class="absolute inset-0 z-10 bg-gradient-to-t to-transparent from-zinc-950/70 from-10% to-50%"></div>

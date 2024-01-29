@@ -42,6 +42,6 @@ require_once "functions/spotify.php";
 
 require_once "functions/cronjobs/update-spotify-liste.php";
 
-if(wp_get_environment_type() === 'development'){
+if(wp_get_environment_type() == 'development'){
     require_once "functions/development.php";
 }
