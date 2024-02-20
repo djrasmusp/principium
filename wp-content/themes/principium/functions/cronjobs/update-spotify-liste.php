@@ -7,6 +7,7 @@ if (!wp_next_scheduled("update_spotify_artist_playlists")) {
 add_action("update_spotify_artist_playlists", 'update_spotify_artist_playlists');
 
 function update_spotify_artist_playlists() {
+
     $artists = new WP_Query([
         "post_type" => "artist",
         "posts_per_page" => -1,
@@ -20,11 +21,12 @@ function update_spotify_artist_playlists() {
     ]);
 
     foreach ($artists->posts as $artist) {
-        $spotify_id = get_post_meta($artist->ID, "spotify_artist_id");
+
+        $spotify_id = get_post_meta($artist, "spotify_artist_id", true);
 
         $spotify_playlist = get_artist_top_tracks($spotify_id);
 
-        update_post_meta($artist->ID, "spotify_tracks", $spotify_playlist);
+        update_post_meta($artist, "spotify_tracks", $spotify_playlist);
     }
 
     return true;
@@ -50,11 +52,11 @@ function update_spotify_playlists() {
     ]);
 
     foreach ($artists->posts as $artist) {
-        $spotify_id = get_post_meta($artist->ID, "spotify_playlist_id");
+        $spotify_id = get_post_meta($artist, "spotify_playlist_id", true);
 
         $spotify_playlist = get_artist_top_tracks($spotify_id);
 
-        update_post_meta($artist->ID, "spotify_tracks", $spotify_playlist);
+        update_post_meta($artist, "spotify_tracks", $spotify_playlist);
     }
 
     return true;
