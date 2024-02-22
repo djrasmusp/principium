@@ -10,7 +10,7 @@
  * @var boolean $is_preview
  */
 
-if (!class_exists('BLOCK_ARTIST_SLIDER')) {
+if (!class_exists('BLOCK_SPOTIFY_SLIDER')) {
     class BLOCK_SPOTIFY_SLIDER extends Blocks
     {
         public function __construct($block, $context, $is_preview)

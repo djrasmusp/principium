@@ -3,6 +3,11 @@
     @apply block text-sm font-medium uppercase leading-6 tracking-widest text-page-text font-header;
   }
 
+  input,
+  textarea {
+    @apply font-sans;
+  }
+
   input:not([type="checkbox"]), textarea {
     @apply block w-full rounded-md border-0 placeholder:text-zinc-400 text-zinc-900 shadow-sm ring-1 ring-inset ring-zinc-300 py-1.5 focus-visible:ring-zinc-950 focus-visible:ring-2 focus-visible:ring-inset sm:text-sm sm:leading-6;
 

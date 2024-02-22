@@ -63,7 +63,7 @@ if (!class_exists('BLOCK_ARTIST_CONTENT')) {
                                     </ul>
                                 </div>
                             <?php endif; ?>
-                            <div class="flex-1 pt-16 pb-16 pl-16 lg:block">
+                            <div class="flex-1 pt-16 pb-16 lg:pl-16 lg:block">
                                 <ul class="text-center lg:text-left">
                                     <?php if ($social_medias = get_field('medias')): ?>
                                         <li class="mb-4">
